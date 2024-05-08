@@ -1,0 +1,711 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F3349CC2BEC2B7F0073B00A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3349CB2BEC2B7F0073B00A /* CoreDataManager.swift */; };
+		2F3F07FF2BEB966C001CF197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3F07FE2BEB966C001CF197 /* AppDelegate.swift */; };
+		2F3F08012BEB966C001CF197 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3F08002BEB966C001CF197 /* SceneDelegate.swift */; };
+		2F3F08032BEB966C001CF197 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3F08022BEB966C001CF197 /* ViewController.swift */; };
+		2F3F08062BEB966C001CF197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F3F08042BEB966C001CF197 /* Main.storyboard */; };
+		2F3F08092BEB966C001CF197 /* CoinDBModuler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F3F08072BEB966C001CF197 /* CoinDBModuler.xcdatamodeld */; };
+		2F3F080B2BEB966F001CF197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F3F080A2BEB966F001CF197 /* Assets.xcassets */; };
+		2F3F080E2BEB966F001CF197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F3F080C2BEB966F001CF197 /* LaunchScreen.storyboard */; };
+		2F3F08192BEB966F001CF197 /* CoinDBModulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3F08182BEB966F001CF197 /* CoinDBModulerTests.swift */; };
+		2F3F08232BEB966F001CF197 /* CoinDBModulerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3F08222BEB966F001CF197 /* CoinDBModulerUITests.swift */; };
+		2F3F08252BEB966F001CF197 /* CoinDBModulerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3F08242BEB966F001CF197 /* CoinDBModulerUITestsLaunchTests.swift */; };
+		2F3F08362BEBF0AF001CF197 /* CoinAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3F08352BEBF0AF001CF197 /* CoinAPI */; };
+		2F3F08382BEBF110001CF197 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3F08372BEBF110001CF197 /* Alamofire */; };
+		2F3F083A2BEBF110001CF197 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3F08392BEBF110001CF197 /* AlamofireDynamic */; };
+		2F3F083B2BEBF110001CF197 /* AlamofireDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 2F3F08392BEBF110001CF197 /* AlamofireDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		2F3F083E2BEBF468001CF197 /* FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3F083D2BEBF468001CF197 /* FirstViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F3F08152BEB966F001CF197 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F3F07F32BEB966C001CF197 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F3F07FA2BEB966C001CF197;
+			remoteInfo = CoinDBModuler;
+		};
+		2F3F081F2BEB966F001CF197 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F3F07F32BEB966C001CF197 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F3F07FA2BEB966C001CF197;
+			remoteInfo = CoinDBModuler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2F3F083C2BEBF110001CF197 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2F3F083B2BEBF110001CF197 /* AlamofireDynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2F3349CB2BEC2B7F0073B00A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		2F3F07FB2BEB966C001CF197 /* CoinDBModuler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinDBModuler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F3F07FE2BEB966C001CF197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2F3F08002BEB966C001CF197 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2F3F08022BEB966C001CF197 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2F3F08052BEB966C001CF197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2F3F08082BEB966C001CF197 /* CoinDBModuler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoinDBModuler.xcdatamodel; sourceTree = "<group>"; };
+		2F3F080A2BEB966F001CF197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F3F080D2BEB966F001CF197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2F3F080F2BEB966F001CF197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F3F08142BEB966F001CF197 /* CoinDBModulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinDBModulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F3F08182BEB966F001CF197 /* CoinDBModulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDBModulerTests.swift; sourceTree = "<group>"; };
+		2F3F081E2BEB966F001CF197 /* CoinDBModulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinDBModulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F3F08222BEB966F001CF197 /* CoinDBModulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDBModulerUITests.swift; sourceTree = "<group>"; };
+		2F3F08242BEB966F001CF197 /* CoinDBModulerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDBModulerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2F3F083D2BEBF468001CF197 /* FirstViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F3F07F82BEB966C001CF197 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F3F08362BEBF0AF001CF197 /* CoinAPI in Frameworks */,
+				2F3F083A2BEBF110001CF197 /* AlamofireDynamic in Frameworks */,
+				2F3F08382BEBF110001CF197 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F3F08112BEB966F001CF197 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F3F081B2BEB966F001CF197 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F3349CA2BEC2B6D0073B00A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2F3349CB2BEC2B7F0073B00A /* CoreDataManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2F3F07F22BEB966C001CF197 = {
+			isa = PBXGroup;
+			children = (
+				2F3F07FD2BEB966C001CF197 /* CoinDBModuler */,
+				2F3F08172BEB966F001CF197 /* CoinDBModulerTests */,
+				2F3F08212BEB966F001CF197 /* CoinDBModulerUITests */,
+				2F3F07FC2BEB966C001CF197 /* Products */,
+				2F3F08312BEB97C7001CF197 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2F3F07FC2BEB966C001CF197 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F3F07FB2BEB966C001CF197 /* CoinDBModuler.app */,
+				2F3F08142BEB966F001CF197 /* CoinDBModulerTests.xctest */,
+				2F3F081E2BEB966F001CF197 /* CoinDBModulerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F3F07FD2BEB966C001CF197 /* CoinDBModuler */ = {
+			isa = PBXGroup;
+			children = (
+				2F3349CA2BEC2B6D0073B00A /* Utils */,
+				2F3F07FE2BEB966C001CF197 /* AppDelegate.swift */,
+				2F3F08002BEB966C001CF197 /* SceneDelegate.swift */,
+				2F3F08022BEB966C001CF197 /* ViewController.swift */,
+				2F3F083D2BEBF468001CF197 /* FirstViewModel.swift */,
+				2F3F08042BEB966C001CF197 /* Main.storyboard */,
+				2F3F080A2BEB966F001CF197 /* Assets.xcassets */,
+				2F3F080C2BEB966F001CF197 /* LaunchScreen.storyboard */,
+				2F3F080F2BEB966F001CF197 /* Info.plist */,
+				2F3F08072BEB966C001CF197 /* CoinDBModuler.xcdatamodeld */,
+			);
+			path = CoinDBModuler;
+			sourceTree = "<group>";
+		};
+		2F3F08172BEB966F001CF197 /* CoinDBModulerTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F3F08182BEB966F001CF197 /* CoinDBModulerTests.swift */,
+			);
+			path = CoinDBModulerTests;
+			sourceTree = "<group>";
+		};
+		2F3F08212BEB966F001CF197 /* CoinDBModulerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2F3F08222BEB966F001CF197 /* CoinDBModulerUITests.swift */,
+				2F3F08242BEB966F001CF197 /* CoinDBModulerUITestsLaunchTests.swift */,
+			);
+			path = CoinDBModulerUITests;
+			sourceTree = "<group>";
+		};
+		2F3F08312BEB97C7001CF197 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F3F07FA2BEB966C001CF197 /* CoinDBModuler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F3F08282BEB966F001CF197 /* Build configuration list for PBXNativeTarget "CoinDBModuler" */;
+			buildPhases = (
+				2F3F07F72BEB966C001CF197 /* Sources */,
+				2F3F07F82BEB966C001CF197 /* Frameworks */,
+				2F3F07F92BEB966C001CF197 /* Resources */,
+				2F3F083C2BEBF110001CF197 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoinDBModuler;
+			packageProductDependencies = (
+				2F3F08352BEBF0AF001CF197 /* CoinAPI */,
+				2F3F08372BEBF110001CF197 /* Alamofire */,
+				2F3F08392BEBF110001CF197 /* AlamofireDynamic */,
+			);
+			productName = CoinDBModuler;
+			productReference = 2F3F07FB2BEB966C001CF197 /* CoinDBModuler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2F3F08132BEB966F001CF197 /* CoinDBModulerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F3F082B2BEB966F001CF197 /* Build configuration list for PBXNativeTarget "CoinDBModulerTests" */;
+			buildPhases = (
+				2F3F08102BEB966F001CF197 /* Sources */,
+				2F3F08112BEB966F001CF197 /* Frameworks */,
+				2F3F08122BEB966F001CF197 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F3F08162BEB966F001CF197 /* PBXTargetDependency */,
+			);
+			name = CoinDBModulerTests;
+			productName = CoinDBModulerTests;
+			productReference = 2F3F08142BEB966F001CF197 /* CoinDBModulerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2F3F081D2BEB966F001CF197 /* CoinDBModulerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F3F082E2BEB966F001CF197 /* Build configuration list for PBXNativeTarget "CoinDBModulerUITests" */;
+			buildPhases = (
+				2F3F081A2BEB966F001CF197 /* Sources */,
+				2F3F081B2BEB966F001CF197 /* Frameworks */,
+				2F3F081C2BEB966F001CF197 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F3F08202BEB966F001CF197 /* PBXTargetDependency */,
+			);
+			name = CoinDBModulerUITests;
+			productName = CoinDBModulerUITests;
+			productReference = 2F3F081E2BEB966F001CF197 /* CoinDBModulerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F3F07F32BEB966C001CF197 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					2F3F07FA2BEB966C001CF197 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					2F3F08132BEB966F001CF197 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 2F3F07FA2BEB966C001CF197;
+					};
+					2F3F081D2BEB966F001CF197 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 2F3F07FA2BEB966C001CF197;
+					};
+				};
+			};
+			buildConfigurationList = 2F3F07F62BEB966C001CF197 /* Build configuration list for PBXProject "CoinDBModuler" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F3F07F22BEB966C001CF197;
+			packageReferences = (
+				2F3F08342BEBF03F001CF197 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = 2F3F07FC2BEB966C001CF197 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F3F07FA2BEB966C001CF197 /* CoinDBModuler */,
+				2F3F08132BEB966F001CF197 /* CoinDBModulerTests */,
+				2F3F081D2BEB966F001CF197 /* CoinDBModulerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F3F07F92BEB966C001CF197 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F3F080E2BEB966F001CF197 /* LaunchScreen.storyboard in Resources */,
+				2F3F080B2BEB966F001CF197 /* Assets.xcassets in Resources */,
+				2F3F08062BEB966C001CF197 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F3F08122BEB966F001CF197 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F3F081C2BEB966F001CF197 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F3F07F72BEB966C001CF197 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F3349CC2BEC2B7F0073B00A /* CoreDataManager.swift in Sources */,
+				2F3F08032BEB966C001CF197 /* ViewController.swift in Sources */,
+				2F3F083E2BEBF468001CF197 /* FirstViewModel.swift in Sources */,
+				2F3F08092BEB966C001CF197 /* CoinDBModuler.xcdatamodeld in Sources */,
+				2F3F07FF2BEB966C001CF197 /* AppDelegate.swift in Sources */,
+				2F3F08012BEB966C001CF197 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F3F08102BEB966F001CF197 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F3F08192BEB966F001CF197 /* CoinDBModulerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F3F081A2BEB966F001CF197 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F3F08252BEB966F001CF197 /* CoinDBModulerUITestsLaunchTests.swift in Sources */,
+				2F3F08232BEB966F001CF197 /* CoinDBModulerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F3F08162BEB966F001CF197 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F3F07FA2BEB966C001CF197 /* CoinDBModuler */;
+			targetProxy = 2F3F08152BEB966F001CF197 /* PBXContainerItemProxy */;
+		};
+		2F3F08202BEB966F001CF197 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F3F07FA2BEB966C001CF197 /* CoinDBModuler */;
+			targetProxy = 2F3F081F2BEB966F001CF197 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2F3F08042BEB966C001CF197 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F3F08052BEB966C001CF197 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2F3F080C2BEB966F001CF197 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F3F080D2BEB966F001CF197 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2F3F08262BEB966F001CF197 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2F3F08272BEB966F001CF197 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2F3F08292BEB966F001CF197 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QBHB9GVKB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CoinDBModuler/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ece.CoinDBModuler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2F3F082A2BEB966F001CF197 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QBHB9GVKB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CoinDBModuler/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ece.CoinDBModuler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2F3F082C2BEB966F001CF197 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QBHB9GVKB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ece.CoinDBModulerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoinDBModuler.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CoinDBModuler";
+			};
+			name = Debug;
+		};
+		2F3F082D2BEB966F001CF197 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QBHB9GVKB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ece.CoinDBModulerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoinDBModuler.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CoinDBModuler";
+			};
+			name = Release;
+		};
+		2F3F082F2BEB966F001CF197 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QBHB9GVKB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ece.CoinDBModulerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CoinDBModuler;
+			};
+			name = Debug;
+		};
+		2F3F08302BEB966F001CF197 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QBHB9GVKB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ece.CoinDBModulerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CoinDBModuler;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F3F07F62BEB966C001CF197 /* Build configuration list for PBXProject "CoinDBModuler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F3F08262BEB966F001CF197 /* Debug */,
+				2F3F08272BEB966F001CF197 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F3F08282BEB966F001CF197 /* Build configuration list for PBXNativeTarget "CoinDBModuler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F3F08292BEB966F001CF197 /* Debug */,
+				2F3F082A2BEB966F001CF197 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F3F082B2BEB966F001CF197 /* Build configuration list for PBXNativeTarget "CoinDBModulerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F3F082C2BEB966F001CF197 /* Debug */,
+				2F3F082D2BEB966F001CF197 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F3F082E2BEB966F001CF197 /* Build configuration list for PBXNativeTarget "CoinDBModulerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F3F082F2BEB966F001CF197 /* Debug */,
+				2F3F08302BEB966F001CF197 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2F3F08342BEBF03F001CF197 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F3F08352BEBF0AF001CF197 /* CoinAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoinAPI;
+		};
+		2F3F08372BEBF110001CF197 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F3F08342BEBF03F001CF197 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		2F3F08392BEBF110001CF197 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F3F08342BEBF03F001CF197 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		2F3F08072BEB966C001CF197 /* CoinDBModuler.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2F3F08082BEB966C001CF197 /* CoinDBModuler.xcdatamodel */,
+			);
+			currentVersion = 2F3F08082BEB966C001CF197 /* CoinDBModuler.xcdatamodel */;
+			path = CoinDBModuler.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2F3F07F32BEB966C001CF197 /* Project object */;
+}
