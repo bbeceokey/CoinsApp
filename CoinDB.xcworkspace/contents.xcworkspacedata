@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:CoinAPI">
+   </FileRef>
+   <FileRef
+      location = "group:CoinDBModuler/CoinDBModuler.xcodeproj">
+   </FileRef>
+</Workspace>
