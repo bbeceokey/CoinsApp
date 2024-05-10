@@ -23,6 +23,9 @@
 		2F3F083A2BEBF110001CF197 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3F08392BEBF110001CF197 /* AlamofireDynamic */; };
 		2F3F083B2BEBF110001CF197 /* AlamofireDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 2F3F08392BEBF110001CF197 /* AlamofireDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2F3F083E2BEBF468001CF197 /* FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3F083D2BEBF468001CF197 /* FirstViewModel.swift */; };
+		2F63957B2BEDAE34002FFCD2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2F63957A2BEDAE34002FFCD2 /* Kingfisher */; };
+		2F63957F2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F63957D2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift */; };
+		2F6395802BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F63957E2BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,8 @@
 		2F3F08222BEB966F001CF197 /* CoinDBModulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDBModulerUITests.swift; sourceTree = "<group>"; };
 		2F3F08242BEB966F001CF197 /* CoinDBModulerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDBModulerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2F3F083D2BEBF468001CF197 /* FirstViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewModel.swift; sourceTree = "<group>"; };
+		2F63957D2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
+		2F63957E2BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F63957B2BEDAE34002FFCD2 /* Kingfisher in Frameworks */,
 				2F3F08362BEBF0AF001CF197 /* CoinAPI in Frameworks */,
 				2F3F083A2BEBF110001CF197 /* AlamofireDynamic in Frameworks */,
 				2F3F08382BEBF110001CF197 /* Alamofire in Frameworks */,
@@ -135,6 +141,7 @@
 		2F3F07FD2BEB966C001CF197 /* CoinDBModuler */ = {
 			isa = PBXGroup;
 			children = (
+				2F63957C2BEDB38B002FFCD2 /* Screens */,
 				2F3349CA2BEC2B6D0073B00A /* Utils */,
 				2F3F07FE2BEB966C001CF197 /* AppDelegate.swift */,
 				2F3F08002BEB966C001CF197 /* SceneDelegate.swift */,
@@ -173,6 +180,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2F63957C2BEDB38B002FFCD2 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2F63957D2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift */,
+				2F63957E2BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,6 +210,7 @@
 				2F3F08352BEBF0AF001CF197 /* CoinAPI */,
 				2F3F08372BEBF110001CF197 /* Alamofire */,
 				2F3F08392BEBF110001CF197 /* AlamofireDynamic */,
+				2F63957A2BEDAE34002FFCD2 /* Kingfisher */,
 			);
 			productName = CoinDBModuler;
 			productReference = 2F3F07FB2BEB966C001CF197 /* CoinDBModuler.app */;
@@ -269,6 +286,7 @@
 			mainGroup = 2F3F07F22BEB966C001CF197;
 			packageReferences = (
 				2F3F08342BEBF03F001CF197 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2F6395792BEDAE34002FFCD2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 2F3F07FC2BEB966C001CF197 /* Products */;
 			projectDirPath = "";
@@ -289,6 +307,7 @@
 				2F3F080E2BEB966F001CF197 /* LaunchScreen.storyboard in Resources */,
 				2F3F080B2BEB966F001CF197 /* Assets.xcassets in Resources */,
 				2F3F08062BEB966C001CF197 /* Main.storyboard in Resources */,
+				2F6395802BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F63957F2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift in Sources */,
 				2F3349CC2BEC2B7F0073B00A /* CoreDataManager.swift in Sources */,
 				2F3F08032BEB966C001CF197 /* ViewController.swift in Sources */,
 				2F3F083E2BEBF468001CF197 /* FirstViewModel.swift in Sources */,
@@ -675,6 +695,14 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		2F6395792BEDAE34002FFCD2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -691,6 +719,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2F3F08342BEBF03F001CF197 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = AlamofireDynamic;
+		};
+		2F63957A2BEDAE34002FFCD2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F6395792BEDAE34002FFCD2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 
