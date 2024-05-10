@@ -13,14 +13,15 @@ let package = Package(
             targets: ["CoinAPI"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.9.1"))
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.9.1")),
+        .package(url: "https://github.com/onevcat/Kingfisher", .upToNextMajor(from: "7.11.0"))
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "CoinAPI",
-            dependencies: ["Alamofire"]
+            dependencies: ["Alamofire","Kingfisher"]
         ),
         .testTarget(
             name: "CoinAPITests",

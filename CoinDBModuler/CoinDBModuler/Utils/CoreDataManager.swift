@@ -14,7 +14,7 @@ class CoreDataManager {
     private init() {}
     
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "CoinIcons")
+        let container = NSPersistentContainer(name: "CoinDBModuler")
         container.loadPersistentStores(completionHandler: { (_, error) in
             if let error = error {
                 fatalError("Unresolved error \(error)")
@@ -28,6 +28,7 @@ class CoreDataManager {
         if context.hasChanges {
             do {
                 try context.save()
+                print("core data ya eklendi")
             } catch {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
