@@ -56,7 +56,17 @@ extension ViewController: FirstViewModelDelegate {
 extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //print(movies[indexPath.row].title ?? "")
+        guard let selectedCoin = viewModel.coin(index: indexPath.item) else {
+                print("Seçilen coin bulunamadı.")
+                return
+            }
+            
+            if let coinName = selectedCoin.name {
+                let coin = viewModel.fetchCoreData(coinName: coinName)
+            } else {
+                print("Coin ismi bulunamadı.")
+            }
+        
     }
     
 }

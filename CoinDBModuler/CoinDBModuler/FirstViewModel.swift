@@ -28,6 +28,7 @@ protocol FirstViewModelProtocol{
     var delegate: FirstViewModelDelegate? { get set }
     var numberOfItems: Int { get }
     func coin(index: Int) -> CoinAPI.Coin?
+    func fetchCoreData(coinName: String) -> CoinIcons?
     
 }
 
@@ -85,7 +86,6 @@ final class FirstViewModel {
             newIcon.iconName = coin.name
             newIcon.url = coin.iconUrl
             newIcon.changeRate = coin.change
-            newIcon.grafik = [coin.sparkline] as NSObject
             newIcon.rank = Int32(coin.rank!)
             coreDataManager.saveContext()
         }
@@ -126,5 +126,16 @@ extension FirstViewModel : FirstViewModelProtocol {
             }
             delegate?.reloadData()
         }
+    func fetchCoreData(coinName: String) -> CoinIcons?{
+        guard let coreCoinDatas = coreDataManager.fetchData() else {
+            return nil
+        }
+        for coin in coreCoinDatas {
+            if coin.iconName == coinName {
+                return coin
+            }
+        }
+        return nil
+    }
     
 }

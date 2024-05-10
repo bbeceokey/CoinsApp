@@ -35,4 +35,16 @@ class CoreDataManager {
             }
         }
     }
+    
+    func fetchData() -> [CoinIcons]? {
+        let context = persistentContainer.viewContext
+           let fetchRequest: NSFetchRequest<CoinIcons> = CoinIcons.fetchRequest()
+           do {
+               let data = try context.fetch(fetchRequest)
+               return data
+           } catch {
+               print("Error fetching data: \(error.localizedDescription)")
+               return nil
+           }
+    }
 }
