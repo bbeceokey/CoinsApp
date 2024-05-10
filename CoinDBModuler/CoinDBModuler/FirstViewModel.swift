@@ -14,7 +14,16 @@ extension String {
     }
 }
 
+enum FilterType {
+    case price
+    case marketCap
+    case volume24h
+    case change
+    //case listedAt
+}
+
 protocol FirstViewModelProtocol{
+    func applyFilter(_ filterType: FilterType)
     func load()
     var delegate: FirstViewModelDelegate? { get set }
     var numberOfItems: Int { get }
@@ -26,6 +35,9 @@ protocol FirstViewModelDelegate: AnyObject {
    
     func reloadData()
 }
+
+
+
 
 final class FirstViewModel {
     let service: CoinServiceProtocol
@@ -79,10 +91,7 @@ final class FirstViewModel {
         }
         
         }
-    
-    
-
-
+  
 }
 
 extension FirstViewModel : FirstViewModelProtocol {
@@ -101,5 +110,21 @@ extension FirstViewModel : FirstViewModelProtocol {
         coins[index]
     }
     
+    func applyFilter(_ filterType: FilterType) {
+        //TODO:add timestaps formatted filtered, listedAt vb.
+            switch filterType {
+            case .price:
+                coins.sort { Double($0.price!)! > Double($1.price!)! }
+            case .marketCap:
+                coins.sort { Double($0.marketCap!)! > Double($1.marketCap!)! }
+            case .volume24h:
+                coins.sort { Double($0.marketCap!)! > Double($1.marketCap!)!}
+            case .change:
+                coins.sort {Double($0.change!)! > Double($1.change!)!  }
+            /*case .listedAt:
+                coins.sort { $0.listedAt > $1.listedAt} */
+            }
+            delegate?.reloadData()
+        }
     
 }

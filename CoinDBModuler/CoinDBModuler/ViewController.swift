@@ -11,7 +11,11 @@ import CoinAPI
 import Kingfisher
 
 class ViewController: UIViewController {
+
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var filteredPicker: UIPickerView!
+    let filteredOptions = ["24hVolume", "Price", "Market Cap","Change"] //TODO add smt lastedat vb.-> need to formatted
   
     var viewModel: FirstViewModelProtocol! {
         didSet {
@@ -26,7 +30,8 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "FirstCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "firstCoinCell")
         viewModel!.load()
-
+        filteredPicker.delegate = self
+        filteredPicker.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,4 +88,34 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         .init(top: 0, left: 10, bottom: 0, right: 10)
     }
     
+}
+
+extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1 // Tek bir sütun
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return filteredOptions.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return filteredOptions[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // Seçilen filtre seçeneğine göre filtreleme işlemini gerçekleştirin
+        switch row {
+        case 0: // 24h Volume
+            viewModel.applyFilter(.volume24h)
+        case 1: // Price
+            viewModel.applyFilter(.price)
+        case 2: // Market Cap
+            viewModel.applyFilter(.marketCap)
+        case 3: //change
+            viewModel.applyFilter(.change)
+        default:
+            break
+        }
+    }
 }

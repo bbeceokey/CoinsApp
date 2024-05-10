@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,16 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eAH-DH-K0W">
-                                <rect key="frame" x="254" y="139" width="64" height="30"/>
-                                <menu key="menu" id="sx8-0l-Dys">
-                                    <children>
-                                        <command title="Item 1" id="hf6-iK-yMl"/>
-                                        <command title="Item 2" id="TfD-Jg-GZS"/>
-                                    </children>
-                                </menu>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dW2-VO-nmn">
                                 <rect key="frame" x="16" y="200" width="361" height="602"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -48,21 +37,31 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GNa-TS-CVp">
+                                <rect key="frame" x="216" y="106" width="148" height="105"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPi-av-wvk">
+                                        <rect key="frame" x="0.0" y="0.0" width="148" height="105"/>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dW2-VO-nmn" secondAttribute="bottom" constant="16" id="EjX-3B-E8a"/>
-                            <constraint firstItem="eAH-DH-K0W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="254" id="KvO-Rb-s6U"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eAH-DH-K0W" secondAttribute="trailing" constant="75" id="Saw-cd-RBt"/>
-                            <constraint firstItem="eAH-DH-K0W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="Uzr-In-0Db"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dW2-VO-nmn" secondAttribute="trailing" constant="16" id="cRd-u6-QsY"/>
-                            <constraint firstItem="dW2-VO-nmn" firstAttribute="top" secondItem="eAH-DH-K0W" secondAttribute="bottom" constant="31" id="qhK-ez-t4l"/>
-                            <constraint firstItem="dW2-VO-nmn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xga-1s-efW"/>
+                            <constraint firstItem="GNa-TS-CVp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="0aF-ta-D8g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GNa-TS-CVp" secondAttribute="trailing" constant="29" id="33c-jX-fQ8"/>
+                            <constraint firstItem="GNa-TS-CVp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="216" id="CX7-yo-nDb"/>
+                            <constraint firstItem="dW2-VO-nmn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="141" id="FB4-cq-tBG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GNa-TS-CVp" secondAttribute="bottom" constant="607" id="KLg-9a-Imj"/>
+                            <constraint firstItem="dW2-VO-nmn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fPs-v9-H81"/>
+                            <constraint firstItem="dW2-VO-nmn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fSI-SB-dIn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dW2-VO-nmn" secondAttribute="bottom" constant="16" id="uXK-fd-yK4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="dW2-VO-nmn" id="sYv-IS-seb"/>
+                        <outlet property="filteredPicker" destination="mPi-av-wvk" id="et2-vI-iZ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
