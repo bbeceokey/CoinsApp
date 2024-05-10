@@ -4,22 +4,26 @@
 //
 //  Created by Ece Ok, Vodafone on 8.05.2024.
 //
-
 import Foundation
 import CoinAPI
 import CoreData
 
+extension String {
+    func replacingSVGWithPNG() -> String {
+        return self.replacingOccurrences(of: ".svg", with: ".png")
+    }
+}
 
 protocol FirstViewModelProtocol{
-    
     func load()
     var delegate: FirstViewModelDelegate? { get set }
-    func saveIconToCoreData(imageData: Data?, for coin: Coin)
-    func loadIconDataFromCoreData(for coin: Coin) -> Data?
-    func downloadAndSaveIcon(from url: URL, for coin: Coin)
+    var numberOfItems: Int { get }
+    func coin(index: Int) -> CoinAPI.Coin?
+    
 }
 
 protocol FirstViewModelDelegate: AnyObject {
+   
     func reloadData()
 }
 
@@ -28,74 +32,74 @@ final class FirstViewModel {
     var coins = [Coin]()
     weak var delegate: FirstViewModelDelegate?
     let coreDataManager = CoreDataManager.shared
-    
-        
-   
-    
+    let dispatchGroup = DispatchGroup()
+
     init(service: CoinServiceProtocol) {
             self.service = service
         }
     
-    fileprivate func fetchCoins() {
-        //self.delegate?.showLoadingView() // Loading Göster haberini VC a verir
-        service.fetchCoins { [weak self] response in
-            
-            guard let self else { return }
-            
-            switch response {
-            case .success(let coins):
-                //self.delegate?.hideLoadingView() // Loading Gizle haberini VC a verir
-                DispatchQueue.main.async {
-                    self.coins = coins
-                    self.delegate?.reloadData() // Collectionview Reload et haberini VC a verir
-                }
-                print(coins)
-            case .failure(let error):
-                print("Error:\(error.localizedDescription)")
-            }
-        }
-    }
-
+    func fetchCoinsAndIcons() {
         
+        self.dispatchGroup.enter()
+        
+           service.fetchCoins { [weak self] response in
+               guard let self = self else { return }
+               
+               switch response {
+               case .success(let coins):
+                   self.coins = coins
+                   
+                   self.dispatchGroup.notify(queue: .main) {
+                           // CoreData'ye ikonlar kaydedildikten sonra hücreleri configure et
+                       
+                           self.delegate?.reloadData()
+                       }
+                   
+                   self.saveIconToCoreData( for: coins)
+               case .failure(let error):
+                   print("Error: \(error.localizedDescription)")
+               }
+           }
+        self.dispatchGroup.leave()
+       }
+    
+    
+    
+    func saveIconToCoreData(for coins: [CoinAPI.Coin]) {
+        let context = coreDataManager.persistentContainer.viewContext
+        
+        for coin in coins {
+            let newIcon = CoinIcons(context: context)
+            newIcon.iconName = coin.name
+            newIcon.url = coin.iconUrl
+            newIcon.changeRate = coin.change
+            newIcon.grafik = [coin.sparkline] as NSObject
+            newIcon.rank = Int32(coin.rank!)
+            coreDataManager.saveContext()
+        }
+        
+        }
+    
+    
+
+
 }
 
 extension FirstViewModel : FirstViewModelProtocol {
-    func saveIconToCoreData(imageData: Data?, for coin: CoinAPI.Coin) {
-        guard let imageData = imageData else { return }
-        let context =  coreDataManager.persistentContainer.viewContext
-
-        guard let newIcon = NSEntityDescription.insertNewObject(forEntityName: "CoinIcons", into: context) as? CoinIcons else {
-                print("Error creating new CoreIcons object")
-                return
-            }
-            newIcon.setValue(coin.name, forKey: "coinName")
-            newIcon.setValue(imageData, forKey: "image")
-            CoreDataManager.shared.saveContext()
-    }
     
-    func loadIconDataFromCoreData(for coin: CoinAPI.Coin) -> Data? {
-        <#code#>
-    }
-    
-    func downloadAndSaveIcon(from url: URL, for coin: CoinAPI.Coin) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
-                guard let data = data, error == nil else {
-                    print("Error downloading icon: \(error?.localizedDescription ?? "Unknown error")")
-                    return
-                }
-                
-                // İndirilen veriyi Core Data'ya belirli bir anahtarla kaydet
-                self.saveIconToCoreData(imageData: data, forKey: key, for: coin)
-            }.resume()
-    }
-    
-    
-
     func load() {
-        fetchCoins()
+        DispatchQueue.global().async {
+            self.fetchCoinsAndIcons()
+    }
+    }
+
+    var numberOfItems: Int {
+        coins.count
     }
     
-    
+    func coin(index: Int) -> CoinAPI.Coin? {
+        coins[index]
+    }
     
     
 }
