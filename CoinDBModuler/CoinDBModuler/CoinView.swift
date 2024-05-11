@@ -41,11 +41,12 @@ class CoinView: UIView {
     
     
     func setupView(with viewModel: SecondDetailViewModel) {
+        configureView()
         let (lowValue,highValue) = viewModel.lowHighDedict()
         let changePrice = viewModel.rankChangeCalculate()
            // Configure UI elements with data
           
-           low.text = "LOW:\(lowValue)"
+           low.text = "LOW:\(lowValue ?? "0.0")"
            high.text = "HIGH:\(highValue ?? "0.0")"
            changeRate.text = "\(viewModel.coin?.rank ?? 0) % (\(changePrice ?? "0.0"))"
            price.text = "$\(String(format: "%.2f", (viewModel.coin?.price)!))"

@@ -307,7 +307,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "99DF0751-CB13-46F2-828D-94CAC970E167"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoinDBModuler/CoinDBModuler/SecondDetailViewModel.swift"
@@ -322,7 +322,23 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A1E77D62-A408-4E58-84A9-A1A94DEA589C"
+            uuid = "8A1A426F-D36D-4574-A7F4-8C42A42DA99B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoinDBModuler/CoinDBModuler/FirstViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "saveIconToCoreData(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "379FA891-2C78-4771-B619-2E92927B8918"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -335,7 +351,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "A1E77D62-A408-4E58-84A9-A1A94DEA589C - 1345494a4a6f75ad"
+                  uuid = "379FA891-2C78-4771-B619-2E92927B8918 - 1345494a4a6f75ad"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -350,7 +366,7 @@
                   offsetFromSymbolStart = "232">
                </Location>
                <Location
-                  uuid = "A1E77D62-A408-4E58-84A9-A1A94DEA589C - 1345494a4a6f75ad"
+                  uuid = "379FA891-2C78-4771-B619-2E92927B8918 - 1345494a4a6f75ad"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -370,17 +386,81 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8A1A426F-D36D-4574-A7F4-8C42A42DA99B"
+            uuid = "0ADB880E-FA51-4391-B006-8A866E2CF8A4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CoinDBModuler/CoinDBModuler/FirstViewModel.swift"
+            filePath = "CoinDBModuler/CoinDBModuler/SecondDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "saveIconToCoreData(for:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09ECA2C3-3A6A-4BC3-8BEC-9D63789C4A7E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoinDBModuler/CoinDBModuler/SecondDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3A1D504-ED46-451F-8F96-D52E91E91F29"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoinDBModuler/CoinDBModuler/CoinView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "setupView(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A3A1D504-ED46-451F-8F96-D52E91E91F29 - 25c63badee42c6d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoinDBModuler.CoinView.setupView(with: CoinDBModuler.SecondDetailViewModel) -&gt; ()"
+                  moduleName = "CoinDBModuler"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ece.ok/Desktop/firstTask/CoinsApp/CoinsApp/CoinDBModuler/CoinDBModuler/CoinView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "2072">
+               </Location>
+               <Location
+                  uuid = "A3A1D504-ED46-451F-8F96-D52E91E91F29 - 25c63badee42c6d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoinDBModuler.CoinView.setupView(with: CoinDBModuler.SecondDetailViewModel) -&gt; ()"
+                  moduleName = "CoinDBModuler"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ece.ok/Desktop/firstTask/CoinsApp/CoinsApp/CoinDBModuler/CoinDBModuler/CoinView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "2192">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
