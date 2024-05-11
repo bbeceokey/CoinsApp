@@ -33,7 +33,6 @@ protocol FirstViewModelProtocol{
 }
 
 protocol FirstViewModelDelegate: AnyObject {
-   
     func reloadData()
 }
 
@@ -87,6 +86,7 @@ final class FirstViewModel {
             newIcon.url = coin.iconUrl
             newIcon.changeRate = coin.change
             newIcon.rank = Int32(coin.rank!)
+            newIcon.price = coin.price
             coreDataManager.saveContext()
         }
         
@@ -132,6 +132,7 @@ extension FirstViewModel : FirstViewModelProtocol {
         }
         for coin in coreCoinDatas {
             if coin.iconName == coinName {
+                print("coredatadan çekildi", coin.price)
                 return coin
             }
         }

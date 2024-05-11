@@ -44,7 +44,7 @@ class FirstCollectionViewCell: UICollectionViewCell {
         symbol.text = model.symbol
         coinName.text = model.name
         price.text = "$\(formatPrice(model.price!))"
-        change.text = "$\(setIcon(model)) \(model.change)% ($\(setIcon(model))\(calculateChangeRate(model)))"
+        change.text = "$\(setIcon(model)) \(model.change!)% ($\(setIcon(model))\(calculateChangeRate(model)))"
     }
     
     func formatPrice(_ price : String) -> String{

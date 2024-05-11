@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var filteredPicker: UIPickerView!
     let filteredOptions = ["24hVolume", "Price", "Market Cap","Change"] //TODO add smt lastedat vb.-> need to formatted
+    var sendCoin: ((Any) -> Void)?
   
     var viewModel: FirstViewModelProtocol! {
         didSet {
@@ -39,6 +40,31 @@ class ViewController: UIViewController {
         
     }
     
+    func navigateToCoinAndGraph(_ coin: CoinIcons, graph: [String]) {
+        if let receiverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondVC") as? SecondDetailViewController{
+                    receiverVC.tookCoin = coin
+                    receiverVC.sendCoin = { [weak self] data in
+                        print("gönderilen veri: \(data)")
+                    }
+            receiverVC.graphInfo = graph
+            receiverVC.sendGraph = { [weak self] data in
+                print("gönderilen graph: \(data)")
+            }
+            
+            if let currentVC = UIApplication.shared.keyWindow?.rootViewController {
+                       // Eğer mevcut bir navigation controller varsa, onu kullan
+                       if let navController = currentVC.navigationController {
+                           navController.pushViewController(receiverVC, animated: true)
+                       } else {
+                           // Eğer yoksa, direk mevcut görünüm denetleyicisi üzerine sun
+                           currentVC.present(receiverVC, animated: true, completion: nil)
+                       } 
+                    }
+                }
+    }
+
+    
+    
 
   
 }
@@ -56,18 +82,21 @@ extension ViewController: FirstViewModelDelegate {
 extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let selectedCoin = viewModel.coin(index: indexPath.item) else {
-                print("Seçilen coin bulunamadı.")
-                return
-            }
-            
+        var graph = [String]()
+        if let selectedCoin = viewModel.coin(index: indexPath.item) {
+            graph = selectedCoin.sparkline!
             if let coinName = selectedCoin.name {
-                let coin = viewModel.fetchCoreData(coinName: coinName)
-            } else {
+                let coin = (viewModel.fetchCoreData(coinName: coinName))!
+                navigateToCoinAndGraph(coin,graph:graph)
+            }
+        }
+            
+            else {
                 print("Coin ismi bulunamadı.")
             }
         
     }
+    
     
 }
 

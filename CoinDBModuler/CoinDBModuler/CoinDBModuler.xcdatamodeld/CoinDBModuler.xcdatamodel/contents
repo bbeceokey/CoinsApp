@@ -3,6 +3,7 @@
     <entity name="CoinIcons" representedClassName="CoinIcons" syncable="YES" codeGenerationType="class">
         <attribute name="changeRate" optional="YES" attributeType="String"/>
         <attribute name="iconName" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="String"/>
         <attribute name="rank" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="url" optional="YES" attributeType="URI"/>
     </entity>

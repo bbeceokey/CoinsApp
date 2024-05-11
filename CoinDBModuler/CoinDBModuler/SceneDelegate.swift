@@ -28,6 +28,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let viewModel = FirstViewModel(service: CoinService())
         rootVC.viewModel = viewModel
         
+        let navigationController = UINavigationController(rootViewController: rootVC) // Yeni bir UINavigationController oluşturun
+          
+        
         self.window?.rootViewController = rootVC
         self.window?.makeKeyAndVisible()
     }

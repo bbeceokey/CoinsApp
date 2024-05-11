@@ -26,6 +26,10 @@
 		2F63957B2BEDAE34002FFCD2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2F63957A2BEDAE34002FFCD2 /* Kingfisher */; };
 		2F63957F2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F63957D2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift */; };
 		2F6395802BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F63957E2BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib */; };
+		2FD417F42BEF5323004A1E39 /* SecondDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD417F32BEF5323004A1E39 /* SecondDetailViewController.swift */; };
+		2FD417F62BEF6A94004A1E39 /* CoinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD417F52BEF6A94004A1E39 /* CoinView.xib */; };
+		2FD417F82BEF6ACB004A1E39 /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD417F72BEF6ACB004A1E39 /* CoinView.swift */; };
+		2FD417FA2BEF72A5004A1E39 /* SecondDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD417F92BEF72A5004A1E39 /* SecondDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,10 @@
 		2F3F083D2BEBF468001CF197 /* FirstViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewModel.swift; sourceTree = "<group>"; };
 		2F63957D2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F63957E2BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstCollectionViewCell.xib; sourceTree = "<group>"; };
+		2FD417F32BEF5323004A1E39 /* SecondDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDetailViewController.swift; sourceTree = "<group>"; };
+		2FD417F52BEF6A94004A1E39 /* CoinView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinView.xib; sourceTree = "<group>"; };
+		2FD417F72BEF6ACB004A1E39 /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
+		2FD417F92BEF72A5004A1E39 /* SecondDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,12 +154,16 @@
 				2F3F07FE2BEB966C001CF197 /* AppDelegate.swift */,
 				2F3F08002BEB966C001CF197 /* SceneDelegate.swift */,
 				2F3F08022BEB966C001CF197 /* ViewController.swift */,
+				2FD417F32BEF5323004A1E39 /* SecondDetailViewController.swift */,
 				2F3F083D2BEBF468001CF197 /* FirstViewModel.swift */,
 				2F3F08042BEB966C001CF197 /* Main.storyboard */,
 				2F3F080A2BEB966F001CF197 /* Assets.xcassets */,
 				2F3F080C2BEB966F001CF197 /* LaunchScreen.storyboard */,
 				2F3F080F2BEB966F001CF197 /* Info.plist */,
 				2F3F08072BEB966C001CF197 /* CoinDBModuler.xcdatamodeld */,
+				2FD417F52BEF6A94004A1E39 /* CoinView.xib */,
+				2FD417F72BEF6ACB004A1E39 /* CoinView.swift */,
+				2FD417F92BEF72A5004A1E39 /* SecondDetailViewModel.swift */,
 			);
 			path = CoinDBModuler;
 			sourceTree = "<group>";
@@ -306,6 +318,7 @@
 			files = (
 				2F3F080E2BEB966F001CF197 /* LaunchScreen.storyboard in Resources */,
 				2F3F080B2BEB966F001CF197 /* Assets.xcassets in Resources */,
+				2FD417F62BEF6A94004A1E39 /* CoinView.xib in Resources */,
 				2F3F08062BEB966C001CF197 /* Main.storyboard in Resources */,
 				2F6395802BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib in Resources */,
 			);
@@ -334,9 +347,12 @@
 			files = (
 				2F63957F2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift in Sources */,
 				2F3349CC2BEC2B7F0073B00A /* CoreDataManager.swift in Sources */,
+				2FD417F42BEF5323004A1E39 /* SecondDetailViewController.swift in Sources */,
+				2FD417F82BEF6ACB004A1E39 /* CoinView.swift in Sources */,
 				2F3F08032BEB966C001CF197 /* ViewController.swift in Sources */,
 				2F3F083E2BEBF468001CF197 /* FirstViewModel.swift in Sources */,
 				2F3F08092BEB966C001CF197 /* CoinDBModuler.xcdatamodeld in Sources */,
+				2FD417FA2BEF72A5004A1E39 /* SecondDetailViewModel.swift in Sources */,
 				2F3F07FF2BEB966C001CF197 /* AppDelegate.swift in Sources */,
 				2F3F08012BEB966C001CF197 /* SceneDelegate.swift in Sources */,
 			);

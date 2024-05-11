@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VwE-KB-zf2">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dW2-VO-nmn">
-                                <rect key="frame" x="16" y="200" width="361" height="602"/>
+                                <rect key="frame" x="16" y="244" width="361" height="558"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VEJ-rV-AwI">
                                     <size key="itemSize" width="128" height="128"/>
@@ -38,10 +38,10 @@
                                 </cells>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GNa-TS-CVp">
-                                <rect key="frame" x="216" y="106" width="148" height="105"/>
+                                <rect key="frame" x="216" y="150" width="148" height="61"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPi-av-wvk">
-                                        <rect key="frame" x="0.0" y="0.0" width="148" height="105"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="148" height="61"/>
                                     </pickerView>
                                 </subviews>
                             </stackView>
@@ -59,12 +59,60 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dW2-VO-nmn" secondAttribute="bottom" constant="16" id="uXK-fd-yK4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Zrb-SN-UJQ"/>
                     <connections>
                         <outlet property="collectionView" destination="dW2-VO-nmn" id="sYv-IS-seb"/>
                         <outlet property="filteredPicker" destination="mPi-av-wvk" id="et2-vI-iZ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
+        </scene>
+        <!--Second Detail View Controller-->
+        <scene sceneID="gXD-cl-VsI">
+            <objects>
+                <viewController storyboardIdentifier="SecondVC" id="UdC-A0-Trf" customClass="SecondDetailViewController" customModule="CoinDBModuler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rFA-VG-JzD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRQ-bY-8vX" customClass="CoinView" customModule="CoinDBModuler" customModuleProvider="target">
+                                <rect key="frame" x="20" y="123" width="353" height="146"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fty-Kv-FRo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pRQ-bY-8vX" firstAttribute="leading" secondItem="Fty-Kv-FRo" secondAttribute="leading" constant="20" id="kuc-vD-GHr"/>
+                            <constraint firstItem="pRQ-bY-8vX" firstAttribute="top" secondItem="Fty-Kv-FRo" secondAttribute="top" constant="64" id="ozY-Qf-D2V"/>
+                            <constraint firstItem="Fty-Kv-FRo" firstAttribute="trailing" secondItem="pRQ-bY-8vX" secondAttribute="trailing" constant="20" id="pNp-SQ-A1X"/>
+                            <constraint firstItem="Fty-Kv-FRo" firstAttribute="bottom" secondItem="pRQ-bY-8vX" secondAttribute="bottom" constant="549" id="ue4-P2-nE9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coinDetailView" destination="pRQ-bY-8vX" id="T9V-cQ-Ib0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V1a-mg-RX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2132.06106870229" y="7.746478873239437"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7cK-MQ-Xua">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VwE-KB-zf2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d5B-iX-9zo">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hcm-3n-Hq4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQw-DI-ILJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
