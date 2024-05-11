@@ -19,15 +19,15 @@ class SecondDetailViewModel {
     
     func lowHighDedict() -> (minValue: String?, maxValue: String?){
         guard let graphInfo = graphInfo else {
-                    print("No graph info available")
-                    return (nil, nil)
-                }
-            let intGraph = graphInfo.compactMap { Double($0) }
-
+            print("No graph info available")
+            return (nil, nil)
+        }
+        let intGraph = graphInfo.compactMap { Double($0) }
+        
         let minValue = String(format: "%.2f", intGraph.min() ?? 0.0)
         let maxValue = String(format: "%.2f", intGraph.max() ?? 0.0)
         
-            return (minValue, maxValue)
+        return (minValue, maxValue)
         
     }
     
@@ -47,5 +47,17 @@ class SecondDetailViewModel {
             
         }
         return lastPrice
+    }
+    
+    func priceTextFormat() -> String? {
+        guard let coin = coin else {
+            print("No graph info available")
+            return nil
+        }
+        var formatPrice = ""
+        if let coinPrice = coin.price {
+            formatPrice = String(format: "%.2f", Double(coinPrice)!)
+        } 
+        return formatPrice
     }
 }

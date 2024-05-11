@@ -11,6 +11,7 @@ import Kingfisher
 
 class FirstCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var calculateChange: UILabel!
     @IBOutlet weak var symbol: UILabel!
     @IBOutlet weak var coinIconImage: UIImageView!
     @IBOutlet weak var coinName: UILabel!
@@ -43,14 +44,24 @@ class FirstCollectionViewCell: UICollectionViewCell {
 
         symbol.text = model.symbol
         coinName.text = model.name
-        price.text = "$\(formatPrice(model.price!))"
-        change.text = "$\(setIcon(model)) \(model.change!)% ($\(setIcon(model))\(calculateChangeRate(model)))"
+        price.text = "\(formatPrice(model.price!)!)"
+        change.numberOfLines = 0
+        if ((model.change?.contains("-") == true)){
+            change.textColor = .red
+            calculateChange.textColor = .red
+           
+        } else {
+            change.textColor = .green
+            calculateChange.textColor = .green
+        }
+        change.text = "\(model.change!)% "
+        calculateChange.text = " (\(setIcon(model)!)\(calculateChangeRate(model)!))"
     }
     
-    func formatPrice(_ price : String) -> String{
-        if let price = Double(price) {
-            let roundedPrice = round(price * 1000) / 1000
-            let formattedPrice = String(format: "$%.3f", roundedPrice)
+    func formatPrice(_ price : String?) -> String? {
+        if let price = price {
+            var roundedPrice = round((Double(price) ?? 0.0) * 1000) / 1000
+            var formattedPrice = String(format: "$%.3f", roundedPrice)
             return formattedPrice
         } else {
     
@@ -58,17 +69,17 @@ class FirstCollectionViewCell: UICollectionViewCell {
         }
         
     }
-    func calculateChangeRate(_ model : Coin) -> String {
+    func calculateChangeRate(_ model : Coin) -> String? {
         
-        if let change = Double(model.change!){
-            let modelPrice = Double(model.price!)
-            let changeRange = modelPrice! * change / 100
+        if let change = model.change{
+            var modelPrice = Double(model.price!)
+            var changeRange = (modelPrice ?? 0.0) * (Double(change) ?? 0.0) / 100
             if changeRange > 0 {
-                let lastPrice = modelPrice! + changeRange
-                return String(lastPrice)
+                var lastPrice = (modelPrice ?? 0.0) + changeRange
+                return String(format: "$%.3f",lastPrice)
             } else {
-                let lastPrice = modelPrice! - changeRange
-                return formatPrice(String(lastPrice))
+                var lastPrice = (modelPrice ?? 0.0) - changeRange
+                return String(format: "$%.3f",lastPrice)
             }
         } else {
             return "error"
@@ -76,7 +87,7 @@ class FirstCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func setIcon(_ model : Coin) -> String {
+    func setIcon(_ model : Coin) -> String? {
         var icon : String
         let changePrice = Double(model.change!)
         if changePrice! > 0 {

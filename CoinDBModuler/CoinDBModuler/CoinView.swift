@@ -44,12 +44,13 @@ class CoinView: UIView {
         configureView()
         let (lowValue,highValue) = viewModel.lowHighDedict()
         let changePrice = viewModel.rankChangeCalculate()
+        let priceText = viewModel.priceTextFormat()
            // Configure UI elements with data
           
            low.text = "LOW:\(lowValue ?? "0.0")"
            high.text = "HIGH:\(highValue ?? "0.0")"
            changeRate.text = "\(viewModel.coin?.rank ?? 0) % (\(changePrice ?? "0.0"))"
-           price.text = "$\(String(format: "%.2f", (viewModel.coin?.price)!))"
+        price.text = "$\(priceText ?? "0.00")"
       
        }
 }
