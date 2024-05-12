@@ -110,14 +110,15 @@ class GraphView: UIView {
 
     
     func showDataPointValue(_ value: CGFloat, at point: CGPoint) {
-     
-        let valueLabel = UILabel(frame: CGRect(x: point.x, y: point.y - 20, width: 50, height: 20))
+        let valueLabel = UILabel(frame: CGRect(x: point.x - 25, y: point.y - 30, width: 80, height: 20)) // Metin etiketinin konumunu güncelle
         valueLabel.textAlignment = .center
-        valueLabel.textColor = UIColor.white
-        valueLabel.font = UIFont.systemFont(ofSize: 12)
+        valueLabel.textColor = UIColor.black // Yazı rengini siyah yap
+        valueLabel.backgroundColor = UIColor.white // Metin etiketinin arka plan rengini beyaz yap
+        valueLabel.font = UIFont.boldSystemFont(ofSize: 14) // Yazı boyutunu artır
         valueLabel.text = "\(value)"
         addSubview(valueLabel)
     }
+
     
     override var intrinsicContentSize: CGSize {
         return CGSize(width: 331, height: 227) // Örnek boyutlar, istediğiniz gibi değiştirilebilir

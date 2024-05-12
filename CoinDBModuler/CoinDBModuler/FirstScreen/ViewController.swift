@@ -83,6 +83,16 @@ class ViewController: UIViewController {
                     }
                 }
     }
+    func showFilterAppliedAlert(message: String) {
+        let alert = UIAlertController(title: "Filter Applied", message: message, preferredStyle: .alert)
+        // Kullanıcıya mesajı göster
+        self.present(alert, animated: true, completion: nil)
+        // Mesajı otomatik olarak kapatmak için bir süre bekleyin
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            alert.dismiss(animated: true, completion: nil)
+        }
+    }
+
 
 }
 
@@ -134,17 +144,23 @@ extension ViewController: UICollectionViewDataSource {
                             switch indexPath.row {
                             case 0:
                                 self.viewModel.applyFilter(.volume24h)
+                                showFilterAppliedAlert(message: "Coins sorted by 24h volume.")
                             case 1:
                                 self.viewModel.applyFilter(.price)
+                                showFilterAppliedAlert(message: "Coins sorted by price.")
                             case 2:
                                 self.viewModel.applyFilter(.marketCap)
+                                showFilterAppliedAlert(message: "Coins sorted by market cap.")
                             case 3:
                                 self.viewModel.applyFilter(.change)
+                                showFilterAppliedAlert(message: "Coins sorted by change.")
                             case 4:
                                 self.viewModel.applyListedAtFilter()
+                                showFilterAppliedAlert(message: "Coins sorted by listedAt date.")
                             default:
                                 break
                             }
+
                         }
                         return cell
         } else {
@@ -158,6 +174,7 @@ extension ViewController: UICollectionViewDataSource {
         
     }
 }
+
 extension ViewController: UICollectionViewDelegateFlowLayout {
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

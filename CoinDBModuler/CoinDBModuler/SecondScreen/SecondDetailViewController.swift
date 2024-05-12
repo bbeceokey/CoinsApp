@@ -9,6 +9,7 @@ import UIKit
 
 class SecondDetailViewController: UIViewController {
     
+    @IBOutlet weak var symbolCoin: UILabel!
     var tookCoin : CoinIcons?
     var graphInfo : [String]?
     var sendCoin: ((Any) -> Void)?
@@ -24,10 +25,12 @@ class SecondDetailViewController: UIViewController {
         emptyGraphView.backgroundColor = UIColor.systemGray6
         emptyGraphView.layer.borderWidth = 0.5
         emptyGraphView.layer.borderColor = UIColor.orange.cgColor
+        symbolCoin.numberOfLines = 0
     
         emptyGraphView.addSubview(graphView!)
         if let tookCoin = tookCoin {
             sendCoin?(tookCoin)
+            symbolCoin.text = tookCoin.iconName
             print("coin geldi", tookCoin)
         }
         if let graphInfo = graphInfo {

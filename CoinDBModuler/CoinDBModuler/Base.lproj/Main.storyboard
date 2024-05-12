@@ -96,23 +96,33 @@
                                 <rect key="frame" x="31" y="311" width="331" height="227"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fai-2V-Qny">
+                                <rect key="frame" x="172" y="72" width="49" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fty-Kv-FRo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="pRQ-bY-8vX" firstAttribute="top" secondItem="Fai-2V-Qny" secondAttribute="bottom" constant="28" id="0SD-Y5-upL"/>
                             <constraint firstItem="Fty-Kv-FRo" firstAttribute="trailing" secondItem="ODx-lw-JxH" secondAttribute="trailing" constant="31" id="Bxz-m7-sQG"/>
+                            <constraint firstItem="Fai-2V-Qny" firstAttribute="top" secondItem="Fty-Kv-FRo" secondAttribute="top" constant="13" id="Iml-We-vKS"/>
                             <constraint firstItem="ODx-lw-JxH" firstAttribute="leading" secondItem="Fty-Kv-FRo" secondAttribute="leading" constant="31" id="MRg-me-Lyb"/>
                             <constraint firstItem="ODx-lw-JxH" firstAttribute="top" secondItem="rFA-VG-JzD" secondAttribute="top" constant="311" id="PPE-Lf-XJS"/>
+                            <constraint firstItem="Fty-Kv-FRo" firstAttribute="trailing" secondItem="Fai-2V-Qny" secondAttribute="trailing" constant="172" id="X1Y-oO-aaJ"/>
                             <constraint firstItem="Fty-Kv-FRo" firstAttribute="bottom" secondItem="ODx-lw-JxH" secondAttribute="bottom" constant="280" id="aN8-CG-lhV"/>
+                            <constraint firstItem="Fai-2V-Qny" firstAttribute="leading" secondItem="Fty-Kv-FRo" secondAttribute="leading" constant="172" id="fB7-tc-Soo"/>
                             <constraint firstItem="pRQ-bY-8vX" firstAttribute="leading" secondItem="Fty-Kv-FRo" secondAttribute="leading" constant="20" id="kuc-vD-GHr"/>
                             <constraint firstItem="ODx-lw-JxH" firstAttribute="top" secondItem="pRQ-bY-8vX" secondAttribute="bottom" constant="42" id="mXw-MX-avr"/>
-                            <constraint firstItem="pRQ-bY-8vX" firstAttribute="top" secondItem="Fty-Kv-FRo" secondAttribute="top" constant="64" id="ozY-Qf-D2V"/>
                             <constraint firstItem="Fty-Kv-FRo" firstAttribute="trailing" secondItem="pRQ-bY-8vX" secondAttribute="trailing" constant="20" id="pNp-SQ-A1X"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="coinDetailView" destination="pRQ-bY-8vX" id="T9V-cQ-Ib0"/>
                         <outlet property="emptyGraphView" destination="ODx-lw-JxH" id="I7P-cg-exe"/>
+                        <outlet property="symbolCoin" destination="Fai-2V-Qny" id="AVF-cf-SNh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V1a-mg-RX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

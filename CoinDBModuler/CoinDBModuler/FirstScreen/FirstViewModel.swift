@@ -152,17 +152,16 @@ extension FirstViewModel : FirstViewModelProtocol {
         }
 
     func applyListedAtFilter() {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        
         coins = coins.sorted { coin1, coin2 in
-            guard let date1 = Date(timeIntervalSince1970: TimeInterval(date1Unix)),
-                  let date2 = Date(timeIntervalSince1970: TimeInterval(date2Unix)) else {
-                return false // Eğer tarihler dönüştürülemezse, sıralamayı değiştirmeyin
+            guard let listedAt1Unix = coin1.listedAt,
+                  let listedAt2Unix = coin2.listedAt else {
+                return false // Eğer listedAt değerleri eksikse, sıralamayı değiştirmeyin
             }
-            return date1 < date2
-        
-
+            
+            let listedAt1 = Date(timeIntervalSince1970: TimeInterval(listedAt1Unix))
+            let listedAt2 = Date(timeIntervalSince1970: TimeInterval(listedAt2Unix))
+            
+            return listedAt1 > listedAt2
         }
         
         // Delegate'e verilerin yeniden yükleneceğini bildir
@@ -170,6 +169,7 @@ extension FirstViewModel : FirstViewModelProtocol {
             self.delegate?.reloadData()
         }
     }
+
 
 
         func fetchCoreData(coinName: String) -> CoinIcons?{
