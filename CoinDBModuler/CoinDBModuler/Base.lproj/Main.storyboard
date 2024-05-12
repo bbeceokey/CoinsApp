@@ -92,18 +92,27 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRQ-bY-8vX" customClass="CoinView" customModule="CoinDBModuler" customModuleProvider="target">
                                 <rect key="frame" x="20" y="123" width="353" height="146"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODx-lw-JxH">
+                                <rect key="frame" x="31" y="311" width="331" height="227"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fty-Kv-FRo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Fty-Kv-FRo" firstAttribute="trailing" secondItem="ODx-lw-JxH" secondAttribute="trailing" constant="31" id="Bxz-m7-sQG"/>
+                            <constraint firstItem="ODx-lw-JxH" firstAttribute="leading" secondItem="Fty-Kv-FRo" secondAttribute="leading" constant="31" id="MRg-me-Lyb"/>
+                            <constraint firstItem="ODx-lw-JxH" firstAttribute="top" secondItem="rFA-VG-JzD" secondAttribute="top" constant="311" id="PPE-Lf-XJS"/>
+                            <constraint firstItem="Fty-Kv-FRo" firstAttribute="bottom" secondItem="ODx-lw-JxH" secondAttribute="bottom" constant="280" id="aN8-CG-lhV"/>
                             <constraint firstItem="pRQ-bY-8vX" firstAttribute="leading" secondItem="Fty-Kv-FRo" secondAttribute="leading" constant="20" id="kuc-vD-GHr"/>
+                            <constraint firstItem="ODx-lw-JxH" firstAttribute="top" secondItem="pRQ-bY-8vX" secondAttribute="bottom" constant="42" id="mXw-MX-avr"/>
                             <constraint firstItem="pRQ-bY-8vX" firstAttribute="top" secondItem="Fty-Kv-FRo" secondAttribute="top" constant="64" id="ozY-Qf-D2V"/>
                             <constraint firstItem="Fty-Kv-FRo" firstAttribute="trailing" secondItem="pRQ-bY-8vX" secondAttribute="trailing" constant="20" id="pNp-SQ-A1X"/>
-                            <constraint firstItem="Fty-Kv-FRo" firstAttribute="bottom" secondItem="pRQ-bY-8vX" secondAttribute="bottom" constant="549" id="ue4-P2-nE9"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="coinDetailView" destination="pRQ-bY-8vX" id="T9V-cQ-Ib0"/>
+                        <outlet property="emptyGraphView" destination="ODx-lw-JxH" id="I7P-cg-exe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V1a-mg-RX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

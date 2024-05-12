@@ -25,6 +25,7 @@
 		2F3F083E2BEBF468001CF197 /* FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3F083D2BEBF468001CF197 /* FirstViewModel.swift */; };
 		2F5FF98C2BF0B91E00C54CCC /* FilteredCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5FF98A2BF0B91E00C54CCC /* FilteredCollectionViewCell.swift */; };
 		2F5FF98D2BF0B91E00C54CCC /* FilteredCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F5FF98B2BF0B91E00C54CCC /* FilteredCollectionViewCell.xib */; };
+		2F5FF98F2BF109EE00C54CCC /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5FF98E2BF109EE00C54CCC /* GraphView.swift */; };
 		2F63957B2BEDAE34002FFCD2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2F63957A2BEDAE34002FFCD2 /* Kingfisher */; };
 		2F63957F2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F63957D2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift */; };
 		2F6395802BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F63957E2BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib */; };
@@ -84,6 +85,7 @@
 		2F3F083D2BEBF468001CF197 /* FirstViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewModel.swift; sourceTree = "<group>"; };
 		2F5FF98A2BF0B91E00C54CCC /* FilteredCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F5FF98B2BF0B91E00C54CCC /* FilteredCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilteredCollectionViewCell.xib; sourceTree = "<group>"; };
+		2F5FF98E2BF109EE00C54CCC /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		2F63957D2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F63957E2BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstCollectionViewCell.xib; sourceTree = "<group>"; };
 		2FD417F32BEF5323004A1E39 /* SecondDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDetailViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				2FD417F52BEF6A94004A1E39 /* CoinView.xib */,
 				2FD417F72BEF6ACB004A1E39 /* CoinView.swift */,
 				2FD417F92BEF72A5004A1E39 /* SecondDetailViewModel.swift */,
+				2F5FF98E2BF109EE00C54CCC /* GraphView.swift */,
 			);
 			path = CoinDBModuler;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				2F3F07FF2BEB966C001CF197 /* AppDelegate.swift in Sources */,
 				2F5FF98C2BF0B91E00C54CCC /* FilteredCollectionViewCell.swift in Sources */,
 				2F3F08012BEB966C001CF197 /* SceneDelegate.swift in Sources */,
+				2F5FF98F2BF109EE00C54CCC /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

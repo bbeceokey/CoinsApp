@@ -45,6 +45,7 @@ class CoinView: UIView {
         let (lowValue,highValue) = viewModel.lowHighDedict()
         let changePrice = viewModel.rankChangeCalculate()
         let priceText = viewModel.priceTextFormat()
+        price.textColor = UIColor.orange
            // Configure UI elements with data
           
            low.text = "LOW:\(lowValue ?? "0.0")"
