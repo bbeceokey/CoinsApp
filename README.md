@@ -28,7 +28,7 @@ CoreData, UIKit, Alamofire, Kingfisher libraries are used.
 ## Screen Shots
 |                                   |                                   |                                   |
 | --------------------------------- | --------------------------------- | --------------------------------- |
-| ![Screenshot 1](https://github.com/bbeceokey/CoinsApp/assets/158613315/0d0fdb3b-00a8-457c-9a9a-e8e2502cccbe) | ![Screenshot 2](https://github.com/bbeceokey/CoinsApp/assets/158613315/80ee46ed-f881-4cda-9f37-a6226402fef5) | ![Screenshot 3](https://github.com/bbeceokey/CoinsApp/assets/158613315/b9f2a8ef-758d-4424-baa2-a4ee5c4a8d62) |
+| ![Screenshot 3](https://github.com/bbeceokey/CoinsApp/assets/158613315/0d0fdb3b-00a8-457c-9a9a-e8e2502cccbe) | ![Screenshot 2](https://github.com/bbeceokey/CoinsApp/assets/158613315/80ee46ed-f881-4cda-9f37-a6226402fef5) | ![Screenshot 1](https://github.com/bbeceokey/CoinsApp/assets/158613315/b9f2a8ef-758d-4424-baa2-a4ee5c4a8d62) |
 
 
 
