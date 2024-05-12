@@ -141,7 +141,7 @@ extension ViewController: UICollectionViewDataSource {
                             case 3:
                                 self.viewModel.applyFilter(.change)
                             case 4:
-                                self.viewModel.applyFilter(.listedAt)
+                                self.viewModel.applyListedAtFilter()
                             default:
                                 break
                             }

@@ -131,6 +131,28 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		2F38568B2BF1709800AB3245 /* FirstScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2F63957E2BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib */,
+				2F63957D2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift */,
+				2F3F083D2BEBF468001CF197 /* FirstViewModel.swift */,
+				2F3F08022BEB966C001CF197 /* ViewController.swift */,
+			);
+			path = FirstScreen;
+			sourceTree = "<group>";
+		};
+		2F38568C2BF170D600AB3245 /* SecondScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2FD417F92BEF72A5004A1E39 /* SecondDetailViewModel.swift */,
+				2FD417F32BEF5323004A1E39 /* SecondDetailViewController.swift */,
+				2FD417F72BEF6ACB004A1E39 /* CoinView.swift */,
+				2FD417F52BEF6A94004A1E39 /* CoinView.xib */,
+			);
+			path = SecondScreen;
+			sourceTree = "<group>";
+		};
 		2F3F07F22BEB966C001CF197 = {
 			isa = PBXGroup;
 			children = (
@@ -155,24 +177,17 @@
 		2F3F07FD2BEB966C001CF197 /* CoinDBModuler */ = {
 			isa = PBXGroup;
 			children = (
-				2F63957C2BEDB38B002FFCD2 /* Screens */,
+				2F38568C2BF170D600AB3245 /* SecondScreen */,
+				2F38568B2BF1709800AB3245 /* FirstScreen */,
+				2F63957C2BEDB38B002FFCD2 /* Extras */,
 				2F3349CA2BEC2B6D0073B00A /* Utils */,
 				2F3F07FE2BEB966C001CF197 /* AppDelegate.swift */,
 				2F3F08002BEB966C001CF197 /* SceneDelegate.swift */,
-				2F3F08022BEB966C001CF197 /* ViewController.swift */,
-				2FD417F32BEF5323004A1E39 /* SecondDetailViewController.swift */,
-				2F3F083D2BEBF468001CF197 /* FirstViewModel.swift */,
 				2F3F08042BEB966C001CF197 /* Main.storyboard */,
-				2F5FF98A2BF0B91E00C54CCC /* FilteredCollectionViewCell.swift */,
-				2F5FF98B2BF0B91E00C54CCC /* FilteredCollectionViewCell.xib */,
 				2F3F080A2BEB966F001CF197 /* Assets.xcassets */,
 				2F3F080C2BEB966F001CF197 /* LaunchScreen.storyboard */,
 				2F3F080F2BEB966F001CF197 /* Info.plist */,
 				2F3F08072BEB966C001CF197 /* CoinDBModuler.xcdatamodeld */,
-				2FD417F52BEF6A94004A1E39 /* CoinView.xib */,
-				2FD417F72BEF6ACB004A1E39 /* CoinView.swift */,
-				2FD417F92BEF72A5004A1E39 /* SecondDetailViewModel.swift */,
-				2F5FF98E2BF109EE00C54CCC /* GraphView.swift */,
 			);
 			path = CoinDBModuler;
 			sourceTree = "<group>";
@@ -201,13 +216,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2F63957C2BEDB38B002FFCD2 /* Screens */ = {
+		2F63957C2BEDB38B002FFCD2 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
-				2F63957D2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift */,
-				2F63957E2BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib */,
+				2F5FF98A2BF0B91E00C54CCC /* FilteredCollectionViewCell.swift */,
+				2F5FF98B2BF0B91E00C54CCC /* FilteredCollectionViewCell.xib */,
+				2F5FF98E2BF109EE00C54CCC /* GraphView.swift */,
 			);
-			path = Screens;
+			path = Extras;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

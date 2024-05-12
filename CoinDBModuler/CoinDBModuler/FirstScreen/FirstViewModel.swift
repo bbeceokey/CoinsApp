@@ -29,6 +29,7 @@ protocol FirstViewModelProtocol{
     var numberOfItems: Int { get }
     func coin(index: Int) -> CoinAPI.Coin?
     func fetchCoreData(coinName: String) -> CoinIcons?
+    func applyListedAtFilter()
     
 }
 
@@ -61,6 +62,8 @@ final class FirstViewModel {
            for coin in coins {
                if let listedAtUnix = coin.listedAt {
                    let date = Date(timeIntervalSince1970: TimeInterval(listedAtUnix))
+                   print(coin.name)
+                   print(date)
                    dateArray.append(date)
                }
            }
@@ -68,6 +71,8 @@ final class FirstViewModel {
         return sortedDates
     
     }
+    
+   
 
     func fetchCoinsAndIcons() {
         self.dispatchGroup.enter()
@@ -130,23 +135,6 @@ extension FirstViewModel : FirstViewModelProtocol {
     
     func applyFilter(_ filterType: FilterType) {
         // listedAt durumunda özel sıralama işlemi gerçekleştirilir
-        if filterType == .listedAt {
-            if let sortedDates = coinsDateFormatted(coins: coins) {
-                // coins dizisini listedAt tarihlerine göre sırala
-                coins = coins.sorted { coin1, coin2 in
-                    guard let index1 = coins.firstIndex(of: coin1),
-                          let index2 = coins.firstIndex(of: coin2) else {
-                        return false
-                    }
-                    let date1 = sortedDates[index1]
-                    let date2 = sortedDates[index2]
-                    return date1.compare(date2) == .orderedDescending
-                }
-                DispatchQueue.main.async {
-                                self.delegate?.reloadData()
-                            }
-            }
-        } else {
             // Diğer filtre türleri için standart sıralama işlemi gerçekleştirilir
             switch filterType {
             case .price:
@@ -160,12 +148,29 @@ extension FirstViewModel : FirstViewModelProtocol {
             default:
                 break
             }
+        self.delegate?.reloadData()
         }
+
+    func applyListedAtFilter() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        coins = coins.sorted { coin1, coin2 in
+            guard let date1 = Date(timeIntervalSince1970: TimeInterval(date1Unix)),
+                  let date2 = Date(timeIntervalSince1970: TimeInterval(date2Unix)) else {
+                return false // Eğer tarihler dönüştürülemezse, sıralamayı değiştirmeyin
+            }
+            return date1 < date2
+        
+
+        }
+        
         // Delegate'e verilerin yeniden yükleneceğini bildir
         DispatchQueue.main.async {
             self.delegate?.reloadData()
-           }
+        }
     }
+
 
         func fetchCoreData(coinName: String) -> CoinIcons?{
             guard let coreCoinDatas = coreDataManager.fetchData() else {
