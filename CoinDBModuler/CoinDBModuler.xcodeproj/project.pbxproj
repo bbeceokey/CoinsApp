@@ -23,6 +23,8 @@
 		2F3F083A2BEBF110001CF197 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3F08392BEBF110001CF197 /* AlamofireDynamic */; };
 		2F3F083B2BEBF110001CF197 /* AlamofireDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 2F3F08392BEBF110001CF197 /* AlamofireDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2F3F083E2BEBF468001CF197 /* FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3F083D2BEBF468001CF197 /* FirstViewModel.swift */; };
+		2F5FF98C2BF0B91E00C54CCC /* FilteredCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5FF98A2BF0B91E00C54CCC /* FilteredCollectionViewCell.swift */; };
+		2F5FF98D2BF0B91E00C54CCC /* FilteredCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F5FF98B2BF0B91E00C54CCC /* FilteredCollectionViewCell.xib */; };
 		2F63957B2BEDAE34002FFCD2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2F63957A2BEDAE34002FFCD2 /* Kingfisher */; };
 		2F63957F2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F63957D2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift */; };
 		2F6395802BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F63957E2BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib */; };
@@ -80,6 +82,8 @@
 		2F3F08222BEB966F001CF197 /* CoinDBModulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDBModulerUITests.swift; sourceTree = "<group>"; };
 		2F3F08242BEB966F001CF197 /* CoinDBModulerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDBModulerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2F3F083D2BEBF468001CF197 /* FirstViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewModel.swift; sourceTree = "<group>"; };
+		2F5FF98A2BF0B91E00C54CCC /* FilteredCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredCollectionViewCell.swift; sourceTree = "<group>"; };
+		2F5FF98B2BF0B91E00C54CCC /* FilteredCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilteredCollectionViewCell.xib; sourceTree = "<group>"; };
 		2F63957D2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F63957E2BEDB3AC002FFCD2 /* FirstCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstCollectionViewCell.xib; sourceTree = "<group>"; };
 		2FD417F32BEF5323004A1E39 /* SecondDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDetailViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 				2FD417F32BEF5323004A1E39 /* SecondDetailViewController.swift */,
 				2F3F083D2BEBF468001CF197 /* FirstViewModel.swift */,
 				2F3F08042BEB966C001CF197 /* Main.storyboard */,
+				2F5FF98A2BF0B91E00C54CCC /* FilteredCollectionViewCell.swift */,
+				2F5FF98B2BF0B91E00C54CCC /* FilteredCollectionViewCell.xib */,
 				2F3F080A2BEB966F001CF197 /* Assets.xcassets */,
 				2F3F080C2BEB966F001CF197 /* LaunchScreen.storyboard */,
 				2F3F080F2BEB966F001CF197 /* Info.plist */,
@@ -317,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F3F080E2BEB966F001CF197 /* LaunchScreen.storyboard in Resources */,
+				2F5FF98D2BF0B91E00C54CCC /* FilteredCollectionViewCell.xib in Resources */,
 				2F3F080B2BEB966F001CF197 /* Assets.xcassets in Resources */,
 				2FD417F62BEF6A94004A1E39 /* CoinView.xib in Resources */,
 				2F3F08062BEB966C001CF197 /* Main.storyboard in Resources */,
@@ -354,6 +361,7 @@
 				2F3F08092BEB966C001CF197 /* CoinDBModuler.xcdatamodeld in Sources */,
 				2FD417FA2BEF72A5004A1E39 /* SecondDetailViewModel.swift in Sources */,
 				2F3F07FF2BEB966C001CF197 /* AppDelegate.swift in Sources */,
+				2F5FF98C2BF0B91E00C54CCC /* FilteredCollectionViewCell.swift in Sources */,
 				2F3F08012BEB966C001CF197 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Recent Ratings-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="CoinDBModuler" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,32 +37,44 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GNa-TS-CVp">
-                                <rect key="frame" x="216" y="150" width="148" height="61"/>
-                                <subviews>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPi-av-wvk">
-                                        <rect key="frame" x="0.0" y="0.0" width="148" height="61"/>
-                                    </pickerView>
-                                </subviews>
-                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NTQ-o1-EGx">
+                                <rect key="frame" x="0.0" y="131" width="393" height="87"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="klG-Vn-OVi">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="baJ-UI-Aqd">
+                                        <rect key="frame" x="0.0" y="-20.666666666666668" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jI9-db-LMq">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GNa-TS-CVp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="0aF-ta-D8g"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GNa-TS-CVp" secondAttribute="trailing" constant="29" id="33c-jX-fQ8"/>
-                            <constraint firstItem="GNa-TS-CVp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="216" id="CX7-yo-nDb"/>
+                            <constraint firstItem="dW2-VO-nmn" firstAttribute="top" secondItem="NTQ-o1-EGx" secondAttribute="bottom" constant="26" id="5wx-2k-TEe"/>
+                            <constraint firstItem="NTQ-o1-EGx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="Cfd-MV-1cl"/>
                             <constraint firstItem="dW2-VO-nmn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="141" id="FB4-cq-tBG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GNa-TS-CVp" secondAttribute="bottom" constant="607" id="KLg-9a-Imj"/>
+                            <constraint firstItem="NTQ-o1-EGx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KoG-jh-fcl"/>
                             <constraint firstItem="dW2-VO-nmn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fPs-v9-H81"/>
                             <constraint firstItem="dW2-VO-nmn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fSI-SB-dIn"/>
+                            <constraint firstItem="NTQ-o1-EGx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lMy-2b-V8L"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dW2-VO-nmn" secondAttribute="bottom" constant="16" id="uXK-fd-yK4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Zrb-SN-UJQ"/>
+                    <navigationItem key="navigationItem" title="Recent Ratings" id="Zrb-SN-UJQ"/>
                     <connections>
                         <outlet property="collectionView" destination="dW2-VO-nmn" id="sYv-IS-seb"/>
-                        <outlet property="filteredPicker" destination="mPi-av-wvk" id="et2-vI-iZ1"/>
+                        <outlet property="filteredCollectionView" destination="NTQ-o1-EGx" id="Ut1-qv-7Zs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

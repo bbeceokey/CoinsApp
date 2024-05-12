@@ -14,6 +14,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var filteredCollectionView: UICollectionView!
     @IBOutlet weak var filteredPicker: UIPickerView!
     let filteredOptions = ["24hVolume", "Price", "Market Cap","Change"] //TODO add smt lastedat vb.-> need to formatted
     var sendCoin: ((Any) -> Void)?
@@ -31,8 +32,9 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "FirstCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "firstCoinCell")
         viewModel!.load()
-        filteredPicker.delegate = self
-        filteredPicker.dataSource = self
+        filteredCollectionView.delegate = self
+        filteredCollectionView.dataSource = self
+        filteredCollectionView.register(UINib(nibName: "FilteredCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "filterCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,10 +65,6 @@ class ViewController: UIViewController {
                 }
     }
 
-    
-    
-
-  
 }
 
 extension ViewController: FirstViewModelDelegate {
@@ -82,40 +80,65 @@ extension ViewController: FirstViewModelDelegate {
 extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var graph = [String]()
-        if let selectedCoin = viewModel.coin(index: indexPath.item) {
-            graph = selectedCoin.sparkline!
-            if let coinName = selectedCoin.name {
-                let coin = (viewModel.fetchCoreData(coinName: coinName))!
-                navigateToCoinAndGraph(coin,graph:graph)
+       
+            var graph = [String]()
+            if let selectedCoin = viewModel.coin(index: indexPath.item) {
+                graph = selectedCoin.sparkline!
+                if let coinName = selectedCoin.name {
+                    let coin = (viewModel.fetchCoreData(coinName: coinName))!
+                    navigateToCoinAndGraph(coin,graph:graph)
+                }
             }
-        }
+                else {
+                    print("Coin ismi bulunamadı.")
+                }
             
-            else {
-                print("Coin ismi bulunamadı.")
-            }
-        
-    }
-    
-    
+        }
+
 }
 
 extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.numberOfItems
+        if collectionView == filteredCollectionView{
+            filteredOptions.count
+        } else {
+            viewModel.numberOfItems
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == filteredCollectionView{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath) as! FilteredCollectionViewCell
+                        cell.configure(filterType: filteredOptions[indexPath.row])
+                        cell.applyFilterAction = { [weak self] in
+                            guard let self = self else { return }
+                            switch indexPath.row {
+                            case 0:
+                                self.viewModel.applyFilter(.volume24h)
+                            case 1:
+                                self.viewModel.applyFilter(.price)
+                            case 2:
+                                self.viewModel.applyFilter(.marketCap)
+                            case 3:
+                                self.viewModel.applyFilter(.change)
+                            default:
+                                break
+                            }
+                        }
+                        return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "firstCoinCell", for: indexPath) as! FirstCollectionViewCell
+            if let coin = viewModel.coin(index: indexPath.item){
+                cell.configure(coin)
+            }
+            return cell
+        }
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "firstCoinCell", for: indexPath) as! FirstCollectionViewCell
-        if let coin = viewModel.coin(index: indexPath.item){
-            cell.configure(coin)
-          }
-          return cell
+        
     }
 }
-
 extension ViewController: UICollectionViewDelegateFlowLayout {
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -127,34 +150,4 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         .init(top: 0, left: 10, bottom: 0, right: 10)
     }
     
-}
-
-extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1 // Tek bir sütun
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return filteredOptions.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return filteredOptions[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // Seçilen filtre seçeneğine göre filtreleme işlemini gerçekleştirin
-        switch row {
-        case 0: // 24h Volume
-            viewModel.applyFilter(.volume24h)
-        case 1: // Price
-            viewModel.applyFilter(.price)
-        case 2: // Market Cap
-            viewModel.applyFilter(.marketCap)
-        case 3: //change
-            viewModel.applyFilter(.change)
-        default:
-            break
-        }
-    }
 }
