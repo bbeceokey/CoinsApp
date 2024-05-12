@@ -6,7 +6,7 @@
 //
 
 import Foundation
-public struct Coin: Decodable {
+public struct Coin: Decodable , Equatable {
     public let uuid: String?
     public let symbol: String?
     public let name: String?

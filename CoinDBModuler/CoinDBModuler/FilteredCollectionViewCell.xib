@@ -20,18 +20,18 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVh-oC-FuU">
                         <rect key="frame" x="0.0" y="0.0" width="85" height="110"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4g-15-bpk">
-                                <rect key="frame" x="2" y="37" width="81" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKB-PT-YNT">
+                                <rect key="frame" x="5" y="38" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="g4g-15-bpk" firstAttribute="leading" secondItem="EVh-oC-FuU" secondAttribute="leading" constant="2" id="8pY-UM-wEV"/>
-                            <constraint firstAttribute="bottom" secondItem="g4g-15-bpk" secondAttribute="bottom" constant="36" id="F83-yZ-QQ5"/>
-                            <constraint firstItem="g4g-15-bpk" firstAttribute="top" secondItem="EVh-oC-FuU" secondAttribute="top" constant="37" id="QKt-rT-X4f"/>
-                            <constraint firstAttribute="trailing" secondItem="g4g-15-bpk" secondAttribute="trailing" constant="2" id="d4U-wL-57W"/>
+                            <constraint firstItem="TKB-PT-YNT" firstAttribute="top" secondItem="EVh-oC-FuU" secondAttribute="top" constant="38" id="6Zh-mK-hfr"/>
+                            <constraint firstAttribute="trailing" secondItem="TKB-PT-YNT" secondAttribute="trailing" constant="5" id="K0h-Qt-0Tu"/>
+                            <constraint firstAttribute="bottom" secondItem="TKB-PT-YNT" secondAttribute="bottom" constant="37" id="S5v-VI-veB"/>
+                            <constraint firstItem="TKB-PT-YNT" firstAttribute="leading" secondItem="EVh-oC-FuU" secondAttribute="leading" constant="5" id="bWc-d1-fWN"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -45,7 +45,7 @@
             </constraints>
             <size key="customSize" width="125" height="34"/>
             <connections>
-                <outlet property="filterButton" destination="g4g-15-bpk" id="2mi-Hm-8f7"/>
+                <outlet property="filterButton" destination="TKB-PT-YNT" id="xRN-dx-4YJ"/>
             </connections>
             <point key="canvasLocation" x="145.80152671755724" y="25.35211267605634"/>
         </collectionViewCell>

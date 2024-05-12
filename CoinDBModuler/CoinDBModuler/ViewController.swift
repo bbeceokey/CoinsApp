@@ -15,8 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var filteredCollectionView: UICollectionView!
-    @IBOutlet weak var filteredPicker: UIPickerView!
-    let filteredOptions = ["24hVolume", "Price", "Market Cap","Change"] //TODO add smt lastedat vb.-> need to formatted
+    let filteredOptions = ["24hVolume", "Price", "Market Cap","Change","listedAt"] //TODO add smt lastedat vb.-> need to formatted
     var sendCoin: ((Any) -> Void)?
   
     var viewModel: FirstViewModelProtocol! {
@@ -28,13 +27,33 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //view.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
+        collectionView.showsVerticalScrollIndicator = false
         collectionView.register(UINib(nibName: "FirstCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "firstCoinCell")
         viewModel!.load()
         filteredCollectionView.delegate = self
         filteredCollectionView.dataSource = self
         filteredCollectionView.register(UINib(nibName: "FilteredCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "filterCell")
+        filteredCollectionView.showsHorizontalScrollIndicator = false
+        
+        if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+                    // Hücreler arası boşluk ayarı
+                    layout.minimumInteritemSpacing = 10
+                    layout.minimumLineSpacing = 10
+                    
+                    // Hücrelere sınır (border) eklemek için aşağıdaki satırları kullanabilirsiniz.
+                    layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+                    layout.itemSize = CGSize(width: (collectionView!.frame.size.width - 30) / 2, height: 100) // Hücre boyutu
+                    
+                    // Sınır (border) renk ve kalınlık ayarları
+                    layout.sectionInsetReference = .fromSafeArea
+                    layout.sectionHeadersPinToVisibleBounds = true
+                    layout.footerReferenceSize = CGSize(width: 100, height: 100)
+                    
+                }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,8 +87,6 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: FirstViewModelDelegate {
-   
-    
     func reloadData() {
         collectionView.reloadData()
         
@@ -123,6 +140,8 @@ extension ViewController: UICollectionViewDataSource {
                                 self.viewModel.applyFilter(.marketCap)
                             case 3:
                                 self.viewModel.applyFilter(.change)
+                            case 4:
+                                self.viewModel.applyFilter(.listedAt)
                             default:
                                 break
                             }

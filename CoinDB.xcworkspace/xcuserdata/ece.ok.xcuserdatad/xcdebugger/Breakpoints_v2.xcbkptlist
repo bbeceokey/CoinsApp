@@ -30,8 +30,8 @@
             filePath = "CoinDBModuler/CoinDBModuler/FirstViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "fetchCoreData(coinName:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "CoinDBModuler/CoinDBModuler/FirstViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "fetchCoreData(coinName:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "CoinDBModuler/CoinDBModuler/FirstViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
             landmarkName = "fetchCoreData(coinName:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "CoinDBModuler/CoinDBModuler/FirstViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "fetchCoreData(coinName:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -221,8 +221,8 @@
             filePath = "CoinDBModuler/CoinDBModuler/FirstViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "FirstViewModel"
             landmarkType = "21">
          </BreakpointContent>
@@ -411,8 +411,8 @@
             filePath = "CoinDBModuler/CoinDBModuler/Screens/FirstCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "configure(_:)"
             landmarkType = "7">
             <Locations>
@@ -519,8 +519,8 @@
             filePath = "CoinDBModuler/CoinDBModuler/Screens/FirstCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "calculateChangeRate(_:)"
             landmarkType = "7">
             <Locations>
@@ -597,8 +597,8 @@
             filePath = "CoinDBModuler/CoinDBModuler/Screens/FirstCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "formatPrice(_:)"
             landmarkType = "7">
             <Locations>
@@ -675,8 +675,8 @@
             filePath = "CoinDBModuler/CoinDBModuler/Screens/FirstCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "configure(_:)"
             landmarkType = "7">
             <Locations>
@@ -768,8 +768,8 @@
             filePath = "CoinDBModuler/CoinDBModuler/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "navigateToCoinAndGraph(_:graph:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -784,8 +784,8 @@
             filePath = "CoinDBModuler/CoinDBModuler/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "viewModel"
             landmarkType = "24">
          </BreakpointContent>
@@ -800,8 +800,8 @@
             filePath = "CoinDBModuler/CoinDBModuler/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -816,8 +816,8 @@
             filePath = "CoinDBModuler/CoinDBModuler/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -832,10 +832,58 @@
             filePath = "CoinDBModuler/CoinDBModuler/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4ACAA9AB-0E39-430D-87C7-D504D0AB714C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoinDBModuler/CoinDBModuler/FirstViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "coinsDateFormatted(coins:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4ACAA9AB-0E39-430D-87C7-D504D0AB714C - 1c8b7fd917299394"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoinDBModuler.FirstViewModel.coinsDateFormatted(coins: Swift.Optional&lt;Swift.Array&lt;CoinAPI.Coin&gt;&gt;) -&gt; Swift.Optional&lt;Swift.Array&lt;Foundation.Date&gt;&gt;"
+                  moduleName = "CoinDBModuler"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ece.ok/Desktop/firstTask/CoinsApp/CoinsApp/CoinDBModuler/CoinDBModuler/FirstViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "296">
+               </Location>
+               <Location
+                  uuid = "4ACAA9AB-0E39-430D-87C7-D504D0AB714C - 1c8b7fd917299394"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoinDBModuler.FirstViewModel.coinsDateFormatted(coins: Swift.Optional&lt;Swift.Array&lt;CoinAPI.Coin&gt;&gt;) -&gt; Swift.Optional&lt;Swift.Array&lt;Foundation.Date&gt;&gt;"
+                  moduleName = "CoinDBModuler"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ece.ok/Desktop/firstTask/CoinsApp/CoinsApp/CoinDBModuler/CoinDBModuler/FirstViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "312">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

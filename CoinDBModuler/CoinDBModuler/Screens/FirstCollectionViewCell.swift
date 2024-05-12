@@ -19,6 +19,10 @@ class FirstCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var change: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        layer.backgroundColor = UIColor(white: 1.0, alpha: 0.5).cgColor
+        layer.cornerRadius = 2.0
+        layer.borderWidth = 0.25
+        layer.borderColor = UIColor.orange.cgColor
         // Initialization code
     }
     override func prepareForReuse() {

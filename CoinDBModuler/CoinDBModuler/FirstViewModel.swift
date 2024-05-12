@@ -19,7 +19,7 @@ enum FilterType {
     case marketCap
     case volume24h
     case change
-    //case listedAt
+    case listedAt
 }
 
 protocol FirstViewModelProtocol{
@@ -37,21 +37,39 @@ protocol FirstViewModelDelegate: AnyObject {
 }
 
 
-
-
 final class FirstViewModel {
     let service: CoinServiceProtocol
     var coins = [Coin]()
     weak var delegate: FirstViewModelDelegate?
     let coreDataManager = CoreDataManager.shared
     let dispatchGroup = DispatchGroup()
+    let dateFormatter = DateFormatter()
 
     init(service: CoinServiceProtocol) {
             self.service = service
         }
     
+    func coinsDateFormatted(coins: [Coin]?) -> [Date]? {
+        guard let coins = coins else {
+               return nil
+           }
+           
+           let dateFormatter = DateFormatter()
+           dateFormatter.dateFormat = "yyyy-MM-dd"
+           
+           var dateArray: [Date] = []
+           for coin in coins {
+               if let listedAtUnix = coin.listedAt {
+                   let date = Date(timeIntervalSince1970: TimeInterval(listedAtUnix))
+                   dateArray.append(date)
+               }
+           }
+        let sortedDates = dateArray.sorted(by: { $0.compare($1) == .orderedDescending })
+        return sortedDates
+    
+    }
+
     func fetchCoinsAndIcons() {
-        
         self.dispatchGroup.enter()
         
            service.fetchCoins { [weak self] response in
@@ -99,9 +117,9 @@ extension FirstViewModel : FirstViewModelProtocol {
     func load() {
         DispatchQueue.global().async {
             self.fetchCoinsAndIcons()
+        }
     }
-    }
-
+    
     var numberOfItems: Int {
         coins.count
     }
@@ -111,7 +129,25 @@ extension FirstViewModel : FirstViewModelProtocol {
     }
     
     func applyFilter(_ filterType: FilterType) {
-        //TODO:add timestaps formatted filtered, listedAt vb.
+        // listedAt durumunda özel sıralama işlemi gerçekleştirilir
+        if filterType == .listedAt {
+            if let sortedDates = coinsDateFormatted(coins: coins) {
+                // coins dizisini listedAt tarihlerine göre sırala
+                coins = coins.sorted { coin1, coin2 in
+                    guard let index1 = coins.firstIndex(of: coin1),
+                          let index2 = coins.firstIndex(of: coin2) else {
+                        return false
+                    }
+                    let date1 = sortedDates[index1]
+                    let date2 = sortedDates[index2]
+                    return date1.compare(date2) == .orderedDescending
+                }
+                DispatchQueue.main.async {
+                                self.delegate?.reloadData()
+                            }
+            }
+        } else {
+            // Diğer filtre türleri için standart sıralama işlemi gerçekleştirilir
             switch filterType {
             case .price:
                 coins.sort { Double($0.price!)! > Double($1.price!)! }
@@ -121,22 +157,28 @@ extension FirstViewModel : FirstViewModelProtocol {
                 coins.sort { Double($0.marketCap!)! > Double($1.marketCap!)!}
             case .change:
                 coins.sort {Double($0.change!)! > Double($1.change!)!  }
-            /*case .listedAt:
-                coins.sort { $0.listedAt > $1.listedAt} */
+            default:
+                break
             }
-            delegate?.reloadData()
         }
-    func fetchCoreData(coinName: String) -> CoinIcons?{
-        guard let coreCoinDatas = coreDataManager.fetchData() else {
+        // Delegate'e verilerin yeniden yükleneceğini bildir
+        DispatchQueue.main.async {
+            self.delegate?.reloadData()
+           }
+    }
+
+        func fetchCoreData(coinName: String) -> CoinIcons?{
+            guard let coreCoinDatas = coreDataManager.fetchData() else {
+                return nil
+            }
+            for coin in coreCoinDatas {
+                if coin.iconName == coinName {
+                    print("coredatadan çekildi", coin.price)
+                    return coin
+                }
+            }
             return nil
         }
-        for coin in coreCoinDatas {
-            if coin.iconName == coinName {
-                print("coredatadan çekildi", coin.price)
-                return coin
-            }
-        }
-        return nil
+        
     }
-    
-}
+
