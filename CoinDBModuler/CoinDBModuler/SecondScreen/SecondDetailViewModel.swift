@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SecondDetailViewModel {
+final class SecondDetailViewModel {
     var coin: CoinIcons?
     var graphInfo: [String]?
     
@@ -24,8 +24,8 @@ class SecondDetailViewModel {
         }
         let intGraph = graphInfo.compactMap { Double($0) }
         
-        let minValue = String(format: "%.2f", intGraph.min() ?? 0.0)
-        let maxValue = String(format: "%.2f", intGraph.max() ?? 0.0)
+        let minValue = intGraph.min()?.formattedStringWithThreeDecimal()
+        let maxValue = intGraph.max()?.formattedStringWithThreeDecimal()
         
         return (minValue, maxValue)
         
@@ -40,7 +40,7 @@ class SecondDetailViewModel {
         if let coinPrice = coin.price {
             if let coinPriceDouble = Double(coinPrice), let changeRateDouble = Double(coin.changeRate ?? "0.0") {
                 let change = coinPriceDouble * changeRateDouble / 100.0
-               lastPrice = String(format: "$%.2f", change)
+                lastPrice = change.formattedString()
             }
            
         }
@@ -52,9 +52,9 @@ class SecondDetailViewModel {
             return nil
         }
         var formatPrice = ""
-        if let coinPrice = coin.price {
-            formatPrice = String(format: "%.2f", Double(coinPrice)!)
-        } 
+        if let coinPrice = Double(coin.price!) {
+            formatPrice = coinPrice.formattedString()
+        }
         return formatPrice
     }
 }

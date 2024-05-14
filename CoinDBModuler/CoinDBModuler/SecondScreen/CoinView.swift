@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CoinView: UIView {
+final class CoinView: UIView {
 
     @IBOutlet weak var currentPrice: UILabel!
     

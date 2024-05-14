@@ -10,7 +10,7 @@ import UIKit
 import CoinAPI
 import Kingfisher
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     

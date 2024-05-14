@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F054CFB2BF3A1A300B9D906 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F054CFA2BF3A1A300B9D906 /* Formatter.swift */; };
 		2F3349CC2BEC2B7F0073B00A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3349CB2BEC2B7F0073B00A /* CoreDataManager.swift */; };
 		2F3F07FF2BEB966C001CF197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3F07FE2BEB966C001CF197 /* AppDelegate.swift */; };
 		2F3F08012BEB966C001CF197 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3F08002BEB966C001CF197 /* SceneDelegate.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2F054CFA2BF3A1A300B9D906 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		2F3349CB2BEC2B7F0073B00A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2F3F07FB2BEB966C001CF197 /* CoinDBModuler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinDBModuler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F3F07FE2BEB966C001CF197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				2F3349CB2BEC2B7F0073B00A /* CoreDataManager.swift */,
+				2F054CFA2BF3A1A300B9D906 /* Formatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F63957F2BEDB3AC002FFCD2 /* FirstCollectionViewCell.swift in Sources */,
+				2F054CFB2BF3A1A300B9D906 /* Formatter.swift in Sources */,
 				2F3349CC2BEC2B7F0073B00A /* CoreDataManager.swift in Sources */,
 				2FD417F42BEF5323004A1E39 /* SecondDetailViewController.swift in Sources */,
 				2FD417F82BEF6ACB004A1E39 /* CoinView.swift in Sources */,

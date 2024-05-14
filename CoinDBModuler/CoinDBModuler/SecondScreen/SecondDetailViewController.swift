@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondDetailViewController: UIViewController {
+final class SecondDetailViewController: UIViewController {
     
     @IBOutlet weak var symbolCoin: UILabel!
     var tookCoin : CoinIcons?

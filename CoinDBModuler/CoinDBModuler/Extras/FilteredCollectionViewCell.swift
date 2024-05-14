@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FilteredCollectionViewCell: UICollectionViewCell {
+final class FilteredCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var filterButton: UIButton!
     var applyFilterAction: (() -> Void)?

@@ -915,6 +915,69 @@
                   endingLineNumber = "34"
                   offsetFromSymbolStart = "104">
                </Location>
+               <Location
+                  uuid = "DB6BA7B2-BB56-4132-BD2E-C49156AEA613 - 5015f12ee913b35"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoinDBModuler.SecondDetailViewModel.rankChangeCalculate() -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "CoinDBModuler"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ece.ok/Desktop/firstTask/CoinsApp/CoinsApp/CoinDBModuler/CoinDBModuler/SecondScreen/SecondDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63B45033-9134-4A04-81D1-C7786F6FB5BF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoinDBModuler/CoinDBModuler/Utils/Formatter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "formattedString()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "63B45033-9134-4A04-81D1-C7786F6FB5BF - 984deaeb4b4ebd0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.Double.formattedString() -&gt; Swift.String"
+                  moduleName = "CoinDBModuler"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ece.ok/Desktop/firstTask/CoinsApp/CoinsApp/CoinDBModuler/CoinDBModuler/Utils/Formatter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "63B45033-9134-4A04-81D1-C7786F6FB5BF - 984deaeb4b4ebd0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift.Double.formattedString() -&gt; Swift.String"
+                  moduleName = "CoinDBModuler"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ece.ok/Desktop/firstTask/CoinsApp/CoinsApp/CoinDBModuler/CoinDBModuler/Utils/Formatter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "428">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>

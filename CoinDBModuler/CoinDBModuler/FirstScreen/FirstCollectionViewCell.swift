@@ -9,7 +9,7 @@ import UIKit
 import CoinAPI
 import Kingfisher
 
-class FirstCollectionViewCell: UICollectionViewCell {
+final class FirstCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var calculateChange: UILabel!
     @IBOutlet weak var symbol: UILabel!
@@ -65,7 +65,7 @@ class FirstCollectionViewCell: UICollectionViewCell {
     func formatPrice(_ price : String?) -> String? {
         if let price = price {
             var roundedPrice = round((Double(price) ?? 0.0) * 1000) / 1000
-            var formattedPrice = String(format: "$%.3f", roundedPrice)
+            var formattedPrice = roundedPrice.formattedString()
             return formattedPrice
         } else {
     
@@ -80,10 +80,10 @@ class FirstCollectionViewCell: UICollectionViewCell {
             var changeRange = (modelPrice ?? 0.0) * (Double(change) ?? 0.0) / 100
             if changeRange > 0 {
                 var lastPrice = (modelPrice ?? 0.0) + changeRange
-                return String(format: "$%.3f",lastPrice)
+                return lastPrice.formattedString()
             } else {
                 var lastPrice = (modelPrice ?? 0.0) - changeRange
-                return String(format: "$%.3f",lastPrice)
+                return lastPrice.formattedString()
             }
         } else {
             return "error"
