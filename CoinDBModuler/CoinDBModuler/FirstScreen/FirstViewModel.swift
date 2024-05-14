@@ -110,6 +110,7 @@ final class FirstViewModel {
             newIcon.changeRate = coin.change
             newIcon.rank = Int32(coin.rank!)
             newIcon.price = coin.price
+            newIcon.market = coin.marketCap
             coreDataManager.saveContext()
         }
         

@@ -13,20 +13,14 @@ class GraphView: UIView {
         super.draw(rect)
         
         guard let context = UIGraphicsGetCurrentContext() else { return }
-        
-        // Arka planı siyah yap
+     
         context.setFillColor(UIColor.systemGray6.cgColor)
         context.fill(rect)
-        
-        // Koordinat düzlemini çiz
-        //drawAxes(in: context)
-        
-        // Veri noktalarını çiz
+
         drawDataPoints(in: context)
     }
     
     func drawAxes(in context: CGContext) {
-        // Koordinat düzlemini çiz
         context.setStrokeColor(UIColor.magenta.cgColor) // Çizgi rengini mor yap
         context.setLineWidth(1.0)
         
@@ -53,9 +47,9 @@ class GraphView: UIView {
             let y = bounds.height - 50 - (dataPoints[i] - dataPoints.min()!) * yScale
             
             // Noktayı çiz
-            let pointRect = CGRect(x: x - 5, y: y - 5, width: 10, height: 10) // Nokta boyutunu ayarla
+            let pointRect = CGRect(x: x - 5, y: y - 5, width: 5, height: 5) // Nokta boyutunu ayarla
             context.setFillColor(UIColor.blue.cgColor) // Nokta rengini ayarla (örneğin mavi)
-            context.fillEllipse(in: pointRect) // Noktayı çiz
+            context.fillEllipse(in: pointRect)
         }
         
         // Çizgi çiz
