@@ -50,7 +50,7 @@ class CoinView: UIView {
           
            low.text = "LOW:\(lowValue ?? "0.0")"
            high.text = "HIGH:\(highValue ?? "0.0")"
-           changeRate.text = "\(viewModel.coin?.rank ?? 0) % (\(changePrice ?? "0.0"))"
+           changeRate.text = "\(viewModel.coin?.changeRate ?? "0.0") % (\(changePrice ?? "0.0"))"
         price.text = "$\(priceText ?? "0.00")"
       
        }

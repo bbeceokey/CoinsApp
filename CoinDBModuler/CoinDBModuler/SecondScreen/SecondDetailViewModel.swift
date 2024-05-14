@@ -38,17 +38,14 @@ class SecondDetailViewModel {
         }
         var lastPrice = ""
         if let coinPrice = coin.price {
-            let change = Double(coinPrice)! * Double(coin.rank) / 100.0
-            if change > 0 {
-                lastPrice = String(format: "+$%.2f", change)
-            } else {
-                lastPrice = String(format: "-$%.2f", change)
+            if let coinPriceDouble = Double(coinPrice), let changeRateDouble = Double(coin.changeRate ?? "0.0") {
+                let change = coinPriceDouble * changeRateDouble / 100.0
+               lastPrice = String(format: "$%.2f", change)
             }
-            
+           
         }
         return lastPrice
     }
-    
     func priceTextFormat() -> String? {
         guard let coin = coin else {
             print("No graph info available")
