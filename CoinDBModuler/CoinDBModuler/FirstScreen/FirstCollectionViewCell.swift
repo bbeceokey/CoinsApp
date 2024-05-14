@@ -73,16 +73,17 @@ final class FirstCollectionViewCell: UICollectionViewCell {
         }
         
     }
+    
     func calculateChangeRate(_ model : Coin) -> String? {
         
         if let change = model.change{
             var modelPrice = Double(model.price!)
             var changeRange = (modelPrice ?? 0.0) * (Double(change) ?? 0.0) / 100
             if changeRange > 0 {
-                var lastPrice = (modelPrice ?? 0.0) + changeRange
+                var lastPrice = changeRange
                 return lastPrice.formattedString()
             } else {
-                var lastPrice = (modelPrice ?? 0.0) - changeRange
+                var lastPrice = changeRange
                 return lastPrice.formattedString()
             }
         } else {
@@ -98,8 +99,7 @@ final class FirstCollectionViewCell: UICollectionViewCell {
             icon = "+"
             return icon
         } else {
-            icon = "-"
-            return icon
+            return ""
         }
     }
 }

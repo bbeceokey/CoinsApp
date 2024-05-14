@@ -85,21 +85,16 @@ final class ViewController: UIViewController {
     }
     func showFilterAppliedAlert(message: String) {
         let alert = UIAlertController(title: "Filter Applied", message: message, preferredStyle: .alert)
-        // Kullanıcıya mesajı göster
         self.present(alert, animated: true, completion: nil)
-        // Mesajı otomatik olarak kapatmak için bir süre bekleyin
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             alert.dismiss(animated: true, completion: nil)
         }
     }
-
-
 }
 
 extension ViewController: FirstViewModelDelegate {
     func reloadData() {
         collectionView.reloadData()
-        
     }
     
 }
@@ -170,8 +165,6 @@ extension ViewController: UICollectionViewDataSource {
             }
             return cell
         }
-        
-        
     }
 }
 
