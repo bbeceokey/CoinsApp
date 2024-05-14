@@ -47,7 +47,7 @@ class GraphView: UIView {
             let y = bounds.height - 50 - (dataPoints[i] - dataPoints.min()!) * yScale
             
             // Noktayı çiz
-            let pointRect = CGRect(x: x - 5, y: y - 5, width: 5, height: 5) // Nokta boyutunu ayarla
+            let pointRect = CGRect(x: x - 4, y: y - 4, width: 8, height: 8) // Nokta boyutunu ayarla
             context.setFillColor(UIColor.blue.cgColor) // Nokta rengini ayarla (örneğin mavi)
             context.fillEllipse(in: pointRect)
         }

@@ -48,9 +48,11 @@ final class CoinView: UIView {
         price.textColor = UIColor.orange
            // Configure UI elements with data
           
-           low.text = "LOW:\(lowValue ?? "0.0")"
-           high.text = "HIGH:\(highValue ?? "0.0")"
-           changeRate.text = "\(viewModel.coin?.changeRate ?? "0.0") % (\(changePrice ?? "0.0"))"
+        low.text = "LOW:\(lowValue ?? "0.0")"
+        low.textColor = .systemOrange
+        high.text = "HIGH:\(highValue ?? "0.0")"
+        high.textColor = .systemOrange
+        changeRate.text = "\(viewModel.coin?.changeRate ?? "0.0") % (\(changePrice ?? "0.0"))"
         price.text = "$\(priceText ?? "0.00")"
       
        }

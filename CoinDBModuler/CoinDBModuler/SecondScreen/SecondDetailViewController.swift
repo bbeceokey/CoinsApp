@@ -29,7 +29,7 @@ final class SecondDetailViewController: UIViewController {
         emptyGraphView.layer.borderWidth = 0.5
         emptyGraphView.layer.borderColor = UIColor.orange.cgColor
         symbolCoin.numberOfLines = 0
-    
+        
         emptyGraphView.addSubview(graphView!)
         if let tookCoin = tookCoin {
             sendCoin?(tookCoin)
@@ -40,7 +40,7 @@ final class SecondDetailViewController: UIViewController {
             sendGraph?(graphInfo)
             let cgFloatArray = graphInfo.compactMap { CGFloat(Float($0) ?? 0.0) }
             graphView.dataPoints = cgFloatArray
-           
+            
             print("graph geldi" , graphInfo)
         }
         configureRankMarket(coin: tookCoin!)
@@ -50,14 +50,16 @@ final class SecondDetailViewController: UIViewController {
         func configureRankMarket( coin : CoinIcons){
             rankLabel.text = String(coin.rank)
             rankLabel.textColor = .systemOrange
-            marketLabel.text = Double(coin.market ?? "0.0")?.formattedString()
-            marketLabel.textColor = .systemOrange
+            
+            if let marketValueString = coin.market {
+                if let (marketValue1, marketValue2) = Int(marketValueString)?.calculateMillion() {
+                    marketLabel.text = "\(marketValue1)M \(marketValue2)K "
+                    print(marketLabel.text!)
+                }
+            }
+
+            marketLabel.textColor = .orange
         }
 
     }
-    
-
-
-   
-
 }

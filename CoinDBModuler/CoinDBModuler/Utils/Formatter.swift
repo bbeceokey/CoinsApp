@@ -34,3 +34,13 @@ extension Double {
             }
         }
 }
+
+extension Int{
+    
+    func calculateMillion() -> (Int,Int) {
+            let milyon = self / 1_000_000
+            let bin = (self % 1_000_000) / 1_000
+            return (milyon, bin)
+        }
+    }
+
